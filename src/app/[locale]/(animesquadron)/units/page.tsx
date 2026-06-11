@@ -115,6 +115,11 @@ export default function UnitsPage() {
               Read units guide
             </LocaleLink>
           </Button>
+          <Button asChild variant="outline">
+            <LocaleLink href="/guides/secret-units-guide">
+              Secret units guide
+            </LocaleLink>
+          </Button>
         </div>
         <AdsterraAdFrame slot="banner-300x250" label />
 

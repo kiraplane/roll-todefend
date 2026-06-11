@@ -20,8 +20,9 @@ import type { Locale } from 'next-intl';
 const faqs = [
   {
     question: 'What are the active Anime Squadron codes?',
-    answer:
-      'This page tracks active codes including 1kLikes!, SorryForBugs!, 500Interested!, Tysm5kCCU!, SorryForDelay!, EarlyAccess!, ThankYouEA!, 10KMembers!, and ThanksForSupport! as checked on June 9, 2026.',
+    answer: `This page tracks active codes including ${activeCodes
+      .map((item) => item.code)
+      .join(', ')} as checked on ${codeCheckSummary.checkedAt}.`,
   },
   {
     question: 'Why is my Anime Squadron code not working?',
@@ -36,7 +37,7 @@ const faqs = [
   {
     question: 'Are there expired Anime Squadron codes?',
     answer:
-      'No expired codes were confirmed during the June 9, 2026 source check.',
+      'No expired codes were confirmed during the June 11, 2026 source check.',
   },
 ];
 
@@ -49,7 +50,7 @@ export async function generateMetadata({
   return constructMetadata({
     title: 'Anime Squadron Codes - Active Rewards and Redeem Guide',
     description:
-      'Copy active Anime Squadron codes for Gems, Gold, Trait Shards, Stat Rerolls, Reroll Cubes, and Perfect Cubes, with redeem fixes and spending advice.',
+      'Copy new and active Anime Squadron codes for Gems, Trait Shards, Reroll Cubes, Perfect Cubes, Gold, redeem fixes, and reward spending advice.',
     locale,
     pathname: '/codes',
     image: '/animesquadron/og-image.png',
@@ -80,8 +81,9 @@ export default function CodesPage() {
             Anime Squadron Codes
           </h1>
           <p className="text-lg leading-8 text-[#D5C6B7]">
-            Copy active Anime Squadron codes and spend the rewards with a plan.
-            Current source check: {codeCheckSummary.checkedAt}.
+            Copy the newest Anime Squadron codes first, then use Gems, Trait
+            Shards, Reroll Cubes, Perfect Cubes, and Gold on one clear upgrade
+            plan. Current source check: {codeCheckSummary.checkedAt}.
           </p>
           <LastUpdated date={codeCheckSummary.checkedAt} />
         </header>
@@ -98,8 +100,9 @@ export default function CodesPage() {
           </h2>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-[#D5C6B7]">
             Rewards currently include Gems, Gold, Trait Shards, Stat Rerolls,
-            Reroll Cubes, and Perfect Cubes. Redeem first, then decide which
-            unit deserves your first real upgrade and reroll investment.
+            Reroll Cubes, and Perfect Cubes. Redeem the newest codes first, then
+            decide which unit deserves your first real upgrade and reroll
+            investment.
           </p>
           <div className="mt-5 rounded-lg border border-[#3A2A24] bg-[#090706] p-4">
             <h3 className="font-display text-lg font-bold">Redeem checklist</h3>

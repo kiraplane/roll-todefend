@@ -34,8 +34,8 @@ export default function DiscordPage() {
             Anime Squadron Discord, Trello and Wiki
           </h1>
           <p className="text-lg leading-8 text-[#D5C6B7]">
-            Public launch coverage points players toward Discord and Roblox,
-            while no official Wiki or Trello was verified during this check.
+            Use Roblox as the anchor, treat invite links carefully, and keep
+            codes, tier list decisions, and download steps on stable pages.
           </p>
         </header>
 
@@ -50,13 +50,13 @@ export default function DiscordPage() {
             {
               title: 'Discord',
               status: 'Watch',
-              body: 'Mentioned by code outlets, but invite links can change. Prefer links surfaced from Roblox or developer channels.',
+              body: 'Mentioned by launch coverage and community guides, but invite links can change. Prefer links surfaced from Roblox or developer channels.',
               href: sources.destructoidCodes.url,
             },
             {
               title: 'Trello / Official Wiki',
               status: 'Not verified',
-              body: 'No official Trello or official Wiki was verified during the June 9, 2026 check.',
+              body: 'No official Trello or official Wiki was verified during the June 11, 2026 check.',
               href: sources.destructoidCodes.url,
             },
           ].map((item) => (
@@ -97,14 +97,41 @@ export default function DiscordPage() {
           <Button asChild variant="outline">
             <LocaleLink href="/download">Safe play link</LocaleLink>
           </Button>
+          <Button asChild variant="outline">
+            <LocaleLink href="/codes">Active codes</LocaleLink>
+          </Button>
+          <Button asChild variant="outline">
+            <LocaleLink href="/tier-list">Tier list</LocaleLink>
+          </Button>
         </div>
+
+        <section className="rounded-lg border border-[#3A2A24] bg-[#130D0B] p-6">
+          <h2 className="font-display text-2xl font-bold">
+            Best way to use Discord updates
+          </h2>
+          <div className="mt-4 grid gap-4 text-sm leading-7 text-[#D5C6B7] md:grid-cols-3">
+            <p>
+              <strong className="text-[#FFF5EA]">Codes:</strong> test new code
+              claims inside the Roblox game before changing your reward plan.
+            </p>
+            <p>
+              <strong className="text-[#FFF5EA]">Units:</strong> wait for a role
+              to become clear before spending Perfect Cubes or rare rerolls.
+            </p>
+            <p>
+              <strong className="text-[#FFF5EA]">Links:</strong> avoid external
+              downloads, executors, forms, or pages that ask for account
+              details.
+            </p>
+          </div>
+        </section>
 
         <FaqSection
           items={[
             {
               question: 'Is there an official Anime Squadron Trello?',
               answer:
-                'No official Trello was verified during the June 9, 2026 check.',
+                'No official Trello was verified during the June 11, 2026 check.',
             },
             {
               question: 'Is this site official?',
@@ -114,7 +141,7 @@ export default function DiscordPage() {
             {
               question: 'Where should I get safe links?',
               answer:
-                'Use the official Roblox page and links surfaced by the developer or trusted launch coverage.',
+                'Use the official Roblox page first, then stable codes, tier list, and guide pages for gameplay decisions.',
             },
           ]}
         />

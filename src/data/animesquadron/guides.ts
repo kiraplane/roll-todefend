@@ -24,6 +24,15 @@ const videos = {
     thumbnailUrl: youtubeThumbnail('gCohIPnuQ0U'),
     checkedAt: CHECKED_AT,
   },
+  resourceGuide: {
+    id: 'hxMWDwq7vI0',
+    title: 'BEST Resource Guide in Anime Squadrons! (Gems, Gold & Rerolls)',
+    channel: 'Revex',
+    url: 'https://www.youtube.com/watch?v=hxMWDwq7vI0',
+    thumbnailUrl: youtubeThumbnail('hxMWDwq7vI0'),
+    publishedAt: '2026-06-11',
+    checkedAt: '2026-06-11',
+  },
   noobToPro: {
     id: 'x8-wUSgKliU',
     title: "The ONLY Anime Squadron Guide You'll Ever Need (Noob to Pro)",
@@ -57,6 +66,24 @@ const videos = {
     url: 'https://www.youtube.com/watch?v=FDkLlTguYn0',
     thumbnailUrl: youtubeThumbnail('FDkLlTguYn0'),
     checkedAt: CHECKED_AT,
+  },
+  superiorShanron: {
+    id: 'ykMqz-cCbDk',
+    title: 'Evolved 0.1% Superior Shanron (Omega) in Anime Squadron',
+    channel: 'Langris',
+    url: 'https://www.youtube.com/watch?v=ykMqz-cCbDk',
+    thumbnailUrl: youtubeThumbnail('ykMqz-cCbDk'),
+    publishedAt: '2026-06-11',
+    checkedAt: '2026-06-11',
+  },
+  latestTierList: {
+    id: 'e963SPBbF_M',
+    title: 'THE BEST Tier List For Anime Squadron!!! (Roblox)',
+    channel: 'DomiBlox',
+    url: 'https://www.youtube.com/watch?v=e963SPBbF_M',
+    thumbnailUrl: youtubeThumbnail('e963SPBbF_M'),
+    publishedAt: '2026-06-09',
+    checkedAt: '2026-06-11',
   },
   fullClear: {
     id: '0eEvcVJxFio',
@@ -98,7 +125,7 @@ export const guides: Guide[] = [
     updatedAt: CHECKED_AT,
     sourceStrategy: 'youtube_explainer',
     sourceNotes:
-      'YouTube search on June 9, 2026 surfaced multiple Anime Squadron beginner guides, especially videos focused on Gems, Gold, rerolls, and noob-to-pro routes.',
+      'June 2026 beginner-route checks focus on Gems, Gold, rerolls, and noob-to-pro progression.',
     video: videos.completeBeginner,
     videoSearchQueries: [
       'Anime Squadron Roblox beginner guide',
@@ -157,16 +184,16 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: 'What to copy from walkthrough videos',
+        heading: 'What to copy from real beginner routes',
         paragraphs: [
-          'YouTube beginner walkthroughs are useful because they show what new players actually struggle with: where they redeem codes, how quickly currency disappears, and which mistakes happen before the first serious squad is built.',
-          'Use videos for route shape, not blind spending. If a creator finds a carry faster than you do, copy the decision logic rather than the exact account state. Your summons, codes, and early drops may be different.',
+          'Beginner routes keep exposing the same early problems: players redeem codes late, split currency across too many units, and spend rerolls before they know which unit will stay.',
+          'Copy the route shape, not the exact account state. If another account finds a carry faster than you do, copy the decision logic rather than chasing the same result. Your summons, codes, and early drops may be different.',
         ],
         bullets: [
           'Copy the order: codes, summons, first wall, focused upgrade, then reroll test.',
           'Pause before any rare-material spend and ask what stage it is meant to fix.',
-          'Do not chase a video account that pulled a better unit than you have.',
-          'Return to farming when the video route depends on resources you do not own yet.',
+          'Do not chase another account that pulled a better unit than you have.',
+          'Return to farming when the route depends on resources you do not own yet.',
         ],
       },
     ],
@@ -205,10 +232,10 @@ export const guides: Guide[] = [
     difficulty: 'Beginner',
     coverImageUrl: videoCover(videos.completeBeginner),
     publishedAt: CHECKED_AT,
-    updatedAt: CHECKED_AT,
+    updatedAt: '2026-06-11',
     sourceStrategy: 'user_intent_youtube',
     sourceNotes:
-      'Code rewards were cross-checked against Roblox code pages and YouTube searches for Anime Squadron codes, beginner routes, and reroll farming.',
+      'Code rewards were refreshed against current June 2026 code trackers and beginner-route checks.',
     video: videos.completeBeginner,
     videoSearchQueries: [
       'Anime Squadron Roblox codes',
@@ -311,16 +338,16 @@ export const guides: Guide[] = [
     seoDescription:
       'Use the Anime Squadron tier list as an early role-priority guide for main carry, boss damage, control, support, economy, secret units, and starter filler decisions.',
     summary:
-      'The safest launch tier list ranks what a unit does. Build a carry first, add boss damage when bulky enemies block you, and treat secret or rare units as investments only when their job is clear.',
+      'Anime Squadron tier list traffic is centered on fast decisions: which unit role to build first, when secret units are worth materials, and how to avoid wasting rerolls before the account has a real carry.',
     category: 'Tier List',
     difficulty: 'Intermediate',
-    coverImageUrl: videoCover(videos.completeSystems),
+    coverImageUrl: videoCover(videos.latestTierList),
     publishedAt: CHECKED_AT,
-    updatedAt: CHECKED_AT,
+    updatedAt: '2026-06-11',
     sourceStrategy: 'youtube_explainer',
     sourceNotes:
-      'YouTube results show strong demand around best units, noob-to-pro routes, secret units, and complete progression guides.',
-    video: videos.completeSystems,
+      'Updated after fresh tier-list traffic and current June 2026 Anime Squadron walkthrough checks.',
+    video: videos.latestTierList,
     videoSearchQueries: [
       'Anime Squadron Roblox tier list',
       'Anime Squadron best units',
@@ -333,32 +360,33 @@ export const guides: Guide[] = [
       '/units',
       '/traits',
       '/reroll',
+      '/guides/secret-units-guide',
       '/guides/stat-reroll-guide',
     ],
     body: [
       {
-        heading: 'Rank the job before the name',
+        heading: 'Start the tier list with the job, not the name',
         paragraphs: [
           'A rare unit can still be a bad first investment if it does not solve the stage that blocks you. A tier list should answer what the unit does: wave clear, boss damage, control, support, economy, or temporary filler.',
           'That is why the first Anime Squadron ranking is role-first. Early-access unit names and exact multipliers can change quickly, but the account problems stay familiar. You need a carry, then you need to patch the thing the carry cannot do alone.',
         ],
       },
       {
-        heading: 'Main carry is the safest first tier',
+        heading: 'Main carry is still the first build',
         paragraphs: [
           'The main carry is the unit that turns rewards into more rewards. It clears waves, lets you farm better stages, and creates a reason to spend Gold, traits, and stat rerolls.',
           'A carry deserves investment when you can describe the next clear it unlocks. If the unit only looks impressive in the lobby but does not change the next run, wait.',
         ],
       },
       {
-        heading: 'Secret units need proof, not panic spending',
+        heading: 'Secret units need a role before materials',
         paragraphs: [
-          'YouTube search results show players care about secret units and meta units, which makes sense for a Roblox anime defense game. The mistake is treating every secret pull as an automatic account plan.',
+          'Players are already chasing secret units and meta units, which makes sense for a Roblox anime defense game. The mistake is treating every secret pull as an automatic account plan.',
           'A secret unit becomes a priority when it has a real role and can use your materials better than the current carry. If it needs too much setup or only helps a later mode, it can be saved without draining rerolls today.',
         ],
       },
       {
-        heading: 'Boss damage and control are second-wave investments',
+        heading: 'Boss damage and control come after the carry test',
         paragraphs: [
           'Once waves stop being the problem, bosses expose weak single-target damage. That is when a boss-damage role can move up the tier list. If enemies reach the end before damage has time to work, control becomes more important.',
           'Support and economy are also real, but they are not first by default. They need a damage unit or mode structure to support, otherwise they become polished side projects.',
@@ -372,11 +400,11 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: 'How to read meta videos without overreacting',
+        heading: 'How to react when a unit becomes popular',
         paragraphs: [
-          'Anime Squadron YouTube results already lean toward secret units, noob-to-pro runs, and complete guide claims. Those videos are helpful because they reveal what players are testing, but they can also make every new pull feel mandatory.',
-          'When a video calls a unit meta, ask what role the unit played in the clear. Did it carry waves, delete bosses, enable faster upgrades, or simply look rare on the thumbnail? A role-first tier list keeps the page useful even when names and balance change.',
-          'If several creators keep using the same role to solve the same wall, that role deserves attention. If only one showcase uses a unit with unclear investment cost, wait before spending Perfect Cubes or rare rerolls.',
+          'Anime Squadron discussion is moving quickly around secret units, noob-to-pro routes, and complete progression claims. That is useful for spotting what players are testing, but it can also make every new pull feel mandatory.',
+          'When a unit becomes popular, ask what role it played in the clear. Did it carry waves, delete bosses, enable faster upgrades, or simply look rare on the thumbnail? A role-first tier list keeps the page useful even when names and balance change.',
+          'If several current clears keep using the same role to solve the same wall, that role deserves attention. If only one showcase uses a unit with unclear investment cost, wait before spending Perfect Cubes or rare rerolls.',
           'Recheck the tier list after patches, code waves, or banners because those moments change what players can realistically build. A role can stay important while the best name for that role shifts.',
         ],
         bullets: [
@@ -410,6 +438,120 @@ export const guides: Guide[] = [
     ],
   },
   {
+    slug: 'secret-units-guide',
+    title: 'Anime Squadron Secret Units Guide',
+    seoTitle: 'Anime Squadron Secret Units Guide - SSJ4 Gogeta, Shanron, Meta',
+    seoDescription:
+      'Plan Anime Squadron secret units with SSJ4 Gogeta, Shanron, rare trait, evolution, reroll, Gems, Gold, and carry-priority decisions.',
+    summary:
+      'Secret units can become the heart of an account, but they are not automatic spending targets. Chase them when they solve a real wall, then protect the resources needed to evolve and trait them correctly.',
+    category: 'Units',
+    difficulty: 'Advanced',
+    coverImageUrl: videoCover(videos.noobToSecret),
+    publishedAt: '2026-06-11',
+    updatedAt: '2026-06-11',
+    sourceStrategy: 'youtube_explainer',
+    sourceNotes:
+      'Built from June 2026 secret-unit videos, current tier-list coverage, and early-access progression checks around SSJ4 Gogeta, Shanron, traits, and evolution planning.',
+    video: videos.noobToSecret,
+    videoSearchQueries: [
+      'Anime Squadron secret units',
+      'Anime Squadron SSJ4 Gogeta',
+      'Anime Squadron Shanron Omega',
+      'Anime Squadron meta secret unit',
+    ],
+    tags: ['Secret Units', 'SSJ4 Gogeta', 'Meta'],
+    relatedRoutes: [
+      '/tier-list',
+      '/units',
+      '/traits',
+      '/reroll',
+      '/guides/best-units-tier-list',
+      '/guides/trait-shards-reroll-cubes-farm',
+    ],
+    body: [
+      {
+        heading: 'Treat a secret pull as a project, not a trophy',
+        paragraphs: [
+          'Anime Squadron secret units attract attention because they can become account-defining carries. The mistake is spending as if every secret pull has already earned the account. A secret unit still needs a job, a resource plan, and a clear reason to replace or support your current carry.',
+          'Use the same test you use for every unit: does it improve waves, bosses, farming, co-op, or evolution progress today? If the answer is unclear, save rare materials until the unit proves where it belongs.',
+        ],
+      },
+      {
+        heading: 'SSJ4 Gogeta demand points to carry planning',
+        paragraphs: [
+          'Current guide videos and tier-list coverage show heavy interest around SSJ4 Gogeta style secret-unit routes. That does not mean every player should drain Gems immediately. It means players need a carry plan that separates chasing the unit from building the unit.',
+          'If your account does not already have the resources to support the secret unit, the first goal is preparation: codes redeemed, Gems protected, Gold reserved for the unit that actually clears, and reroll materials saved for the moment the target becomes a keeper.',
+        ],
+        bullets: [
+          'Do not spend Perfect Cubes just because a unit is rare.',
+          'Compare the secret unit against your current main carry in the same mode.',
+          'Keep enough Gems or Gold to recover if the chase misses.',
+          'Wait for a clear role before rolling expensive traits.',
+        ],
+      },
+      {
+        heading: 'Shanron and expensive secrets need economy support',
+        paragraphs: [
+          'Some top-end units are powerful but costly to deploy or evolve. A unit can be high tier and still feel bad on a young account if the run cannot afford it at the right time.',
+          'Before committing to an expensive secret, check whether your economy and support structure can make it active soon enough. If the unit arrives too late to stop leaks or bosses, the better short-term spend may be carry upgrades, Gold farming, or economy support.',
+        ],
+      },
+      {
+        heading: 'Traits decide whether the secret becomes reliable',
+        paragraphs: [
+          'A secret unit with the wrong trait can still underperform, while a strong trait on a proven secret can turn it into the core of multiple modes. Current trait lists highlight rare outcomes such as Superior, Cloner, Rebirth, Entrepreneur, Lethal, and Sniper because they change damage, survival, deployment, or range in ways that are easy to feel.',
+          'The safe route is to test the secret unit first, then trait it. If it already improves a run, a better trait can make the improvement repeatable. If it does not improve the run yet, rerolling may hide the real problem: the account needs more Gold, support, or a different mode target.',
+        ],
+      },
+      {
+        heading: 'Evolution should follow proof',
+        paragraphs: [
+          'Secret evolution is tempting because it looks like the final answer. In practice, evolution should follow proof. The unit should already solve a problem, and the evolution materials should push that solution further.',
+          'If a secret unit only helps after a long setup, build the account that supports the setup first. A rushed evolution plan can freeze progression by moving every reward into a unit that is not yet changing clears.',
+        ],
+      },
+      {
+        heading: 'A secret-unit decision route',
+        paragraphs: [
+          'Start by writing down the wall you are trying to solve. If waves leak, the secret needs wave clear or enough presence to protect the lane. If bosses survive, it needs single-target damage, cooldown value, or support from another unit. If farming is slow, it needs to make a repeatable mode faster.',
+          'Next, test the unit with normal upgrades before spending rare rerolls. If the run changes, choose one resource lane: Gold to raise the floor, traits to raise the ceiling, or stat rerolls to fix a specific weakness. Do not try to do all three at once unless the unit has already become the account center.',
+          'Finally, keep a fallback carry. Secret-unit chases are volatile in a new Roblox game. If the target misses, your account should still progress through codes, farming, and a role-based tier plan instead of being stuck with empty currency.',
+        ],
+        bullets: [
+          'Name the wall before starting a secret-unit chase.',
+          'Test the unit before rare rerolls or Perfect Cubes.',
+          'Spend Gold only when the unit changes a clear window.',
+          'Use traits after the role is obvious.',
+          'Keep farming routes alive while chasing rare units.',
+          'Recheck the guide after major banners or balance changes.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Are Anime Squadron secret units always the best units?',
+        answer:
+          'No. A secret unit is best when it solves your current wave, boss, farm, or support problem better than your existing carry.',
+      },
+      {
+        question: 'Should I chase SSJ4 Gogeta as a beginner?',
+        answer:
+          'Only after redeeming codes and protecting enough resources to keep progressing if the chase fails.',
+      },
+      {
+        question: 'What trait should a secret unit get first?',
+        answer:
+          'Use the trait that strengthens its role. Damage carries prefer damage or cooldown value, expensive units may benefit from economy, and fragile anchors need survival or range.',
+      },
+      {
+        question: 'When should I evolve a secret unit?',
+        answer:
+          'Evolve after the unit has already proven it can improve a real clear or farming loop.',
+      },
+    ],
+  },
+  {
     slug: 'traits-reroll-guide',
     title: 'Anime Squadron Traits Guide',
     seoTitle: 'Anime Squadron Traits Guide - Trait Shards and Perfect Cubes',
@@ -424,7 +566,7 @@ export const guides: Guide[] = [
     updatedAt: CHECKED_AT,
     sourceStrategy: 'youtube_explainer',
     sourceNotes:
-      'YouTube searches surfaced complete guides that focus on secret units, Gems, Gold, traits, and fast progression.',
+      'Current complete-guide checks focus on secret units, Gems, Gold, traits, and fast progression.',
     video: videos.completeSystems,
     videoSearchQueries: [
       'Anime Squadron Roblox traits',
@@ -439,6 +581,7 @@ export const guides: Guide[] = [
       '/reroll',
       '/codes',
       '/guides/stat-reroll-guide',
+      '/guides/trait-shards-reroll-cubes-farm',
     ],
     body: [
       {
@@ -518,6 +661,122 @@ export const guides: Guide[] = [
     ],
   },
   {
+    slug: 'trait-shards-reroll-cubes-farm',
+    title: 'Anime Squadron Trait Shards and Reroll Cubes Farm Guide',
+    seoTitle: 'Anime Squadron Trait Shards and Reroll Cubes Farm Guide',
+    seoDescription:
+      'Farm Anime Squadron Trait Shards, Reroll Cubes, Stat Rerolls, Gems, Gold, and Perfect Cubes with a safe spending and stop-rule route.',
+    summary:
+      'Trait Shards and Reroll Cubes are strongest when they fund one clear improvement. Farm with a named target, spend on one keeper, test the result, and keep enough materials for the next real unit.',
+    category: 'Reroll',
+    difficulty: 'Intermediate',
+    coverImageUrl: videoCover(videos.resourceGuide),
+    publishedAt: '2026-06-11',
+    updatedAt: '2026-06-11',
+    sourceStrategy: 'youtube_explainer',
+    sourceNotes:
+      'Built from current resource, beginner, complete-guide, and trait coverage around Gems, Gold, Trait Shards, Reroll Cubes, Stat Rerolls, Perfect Cubes, and farming decisions.',
+    video: videos.resourceGuide,
+    videoSearchQueries: [
+      'Anime Squadron Trait Shards farm',
+      'Anime Squadron Reroll Cubes farm',
+      'Anime Squadron Gems Gold rerolls farm',
+      'Anime Squadron Superior trait reroll',
+    ],
+    tags: ['Trait Shards', 'Reroll Cubes', 'Farming'],
+    relatedRoutes: [
+      '/codes',
+      '/traits',
+      '/reroll',
+      '/guides/traits-reroll-guide',
+      '/guides/stat-reroll-guide',
+      '/guides/gems-gold-spending-guide',
+    ],
+    body: [
+      {
+        heading: 'Farm for the next roll you can explain',
+        paragraphs: [
+          'Anime Squadron farming gets messy when the target is simply more materials. A better target is a named roll: one trait attempt for the carry, one stat test for a boss unit, or one saved Perfect Cube for a secret unit that already proved itself.',
+          'Before farming Trait Shards or Reroll Cubes, write the spend in one sentence. If the sentence is only "I want better stats," the account probably needs a clearer wall first.',
+        ],
+      },
+      {
+        heading: 'Codes are part of the farming route',
+        paragraphs: [
+          'Active codes can give Trait Shards, Reroll Cubes, Stat Rerolls, Perfect Cubes, Gems, and Gold, which means the first farm action is often redeeming, not grinding. Redeem codes before deciding how much more farming is actually needed.',
+          'After redeeming, split rewards into two piles: materials you can spend today and materials you should protect. Trait Shards and normal reroll tools can test a keeper. Perfect Cubes should wait until the unit is already important.',
+        ],
+      },
+      {
+        heading: 'Trait Shards belong to proven roles',
+        paragraphs: [
+          'The best Trait Shard target is a unit with a stable role. That might be a main carry, boss damage unit, support anchor, economy unit, or rare secret that has already changed a clear.',
+          'Do not spend Trait Shards just to make a temporary unit look cleaner. If a unit is likely to leave the squad after the next summon, the shards should usually stay in the account.',
+        ],
+      },
+      {
+        heading: 'Reroll Cubes need a stop point',
+        paragraphs: [
+          'Reroll Cubes are easy to burn because every result looks close to useful. Set the stop point before rolling. A good stop point is a trait or stat that changes the next run, not a perfect number on a menu.',
+          'Roll, test, and stop if the clear improves. If the clear does not improve after a few attempts, change the question. The account may need Gold upgrades, a second role, or a different mode rather than more rerolls.',
+        ],
+      },
+      {
+        heading: 'Use repeatable raid farming only when it funds a target',
+        paragraphs: [
+          'For reroll materials, repeatable raid farming such as Act 3 normal routes can be useful when your account can clear the run consistently. Treat that kind of route as a funding method, not a reason to roll endlessly.',
+          'If you farm a raid overnight or repeat it heavily, decide the target before spending the result. The best outcome is not a large material pile; it is a specific carry, secret unit, or trait target becoming stronger without draining every fallback option.',
+        ],
+      },
+      {
+        heading: 'Superior, Cloner, and rare traits change the budget',
+        paragraphs: [
+          'Current trait coverage makes rare traits look exciting for good reason. Superior, Cloner, Rebirth, Entrepreneur, Lethal, Sniper, and Wealthy can all change how a unit performs. The danger is chasing them on the wrong target.',
+          'A rare trait is worth more on a unit that already matters. If a weak filler hits a flashy trait, the account still may not improve as much as a normal useful trait on the real carry.',
+        ],
+      },
+      {
+        heading: 'A simple farm and spend loop',
+        paragraphs: [
+          'Use a loop that forces a test after each spend. First, redeem codes and check the material count. Second, choose the unit and the wall. Third, farm until you can afford the next trait or stat attempt. Fourth, roll once or in a small batch. Fifth, test the exact stage or mode that mattered.',
+          'If the test improves, stop and keep farming for the next account problem. If the test fails, do not automatically roll again. Ask whether the unit needs Gold, support, a different trait target, or a better role match.',
+          'This loop keeps farming from becoming endless. You are not farming because resources exist; you are farming because one specific spend can move the account.',
+        ],
+        bullets: [
+          'Redeem codes before grinding extra materials.',
+          'Choose one unit and one wall before rolling.',
+          'Use small reroll batches and test between them.',
+          'Save Perfect Cubes for confirmed keepers.',
+          'Stop when the run changes, even if the trait is not perfect.',
+          'Return to farming only with the next spend already named.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question:
+          'What is the best way to farm Trait Shards in Anime Squadron?',
+        answer:
+          'Start with active codes, then farm only until you can fund a specific trait attempt on a keeper unit.',
+      },
+      {
+        question: 'Should I spend Reroll Cubes as soon as I get them?',
+        answer:
+          'No. Pick one target and one stop point before using Reroll Cubes.',
+      },
+      {
+        question: 'Are Perfect Cubes part of reroll farming?',
+        answer:
+          'They are part of the same resource plan, but they should be protected for units that have already proven long-term value.',
+      },
+      {
+        question: 'Should I chase Superior on every unit?',
+        answer:
+          'No. Superior is strongest on a unit that already has an important role in your squad.',
+      },
+    ],
+  },
+  {
     slug: 'stat-reroll-guide',
     title: 'Anime Squadron Stat Reroll Guide',
     seoTitle: 'Anime Squadron Stat Reroll Guide - When to Spend Rerolls',
@@ -532,7 +791,7 @@ export const guides: Guide[] = [
     updatedAt: CHECKED_AT,
     sourceStrategy: 'youtube_explainer',
     sourceNotes:
-      'YouTube search results around Anime Squadron beginner and complete guides repeatedly mention Gems, Gold, rerolls, farming, and fast progression.',
+      'Beginner and complete-guide checks repeatedly mention Gems, Gold, rerolls, farming, and fast progression.',
     video: videos.completeBeginner,
     videoSearchQueries: [
       'Anime Squadron Roblox reroll',
@@ -546,6 +805,7 @@ export const guides: Guide[] = [
       '/traits',
       '/codes',
       '/tier-list',
+      '/guides/trait-shards-reroll-cubes-farm',
       '/guides/gems-gold-spending-guide',
     ],
     body: [
@@ -639,7 +899,7 @@ export const guides: Guide[] = [
     updatedAt: CHECKED_AT,
     sourceStrategy: 'youtube_explainer',
     sourceNotes:
-      'YouTube search results strongly connect Anime Squadron beginner intent with Gems, Gold, rerolls, farming, and fast progression.',
+      'Current beginner-guide checks strongly connect early progression with Gems, Gold, rerolls, farming, and fast progression.',
     video: videos.completeBeginner,
     videoSearchQueries: [
       'Anime Squadron Gems Gold guide',
@@ -747,7 +1007,7 @@ export const guides: Guide[] = [
     updatedAt: CHECKED_AT,
     sourceStrategy: 'user_intent_youtube',
     sourceNotes:
-      'YouTube results around noob-to-pro and full-completion Anime Squadron videos show demand for mode order, farming, and progression routing.',
+      'Noob-to-pro and full-completion checks show demand for mode order, farming, and progression routing.',
     video: videos.noobToPro,
     videoSearchQueries: [
       'Anime Squadron Roblox gameplay',
@@ -1016,7 +1276,7 @@ export const guides: Guide[] = [
         paragraphs: [
           'Players often search for Anime Squadron APK, script, executor, pastebin, auto farm, or free Robux because those terms appear around Roblox games. Those searches are risky. They usually lead away from the official experience and toward tools that can compromise accounts.',
           'A safe guide should answer those searches without providing the unsafe thing. The right answer is to play through Roblox, redeem legitimate codes inside the game, and improve progression through unit roles, farming order, and reroll discipline.',
-          'If a YouTube video or website claims that a download will unlock secret units, unlimited Gems, or private codes, assume it is unsafe unless the official developer has published it through Roblox-connected channels.',
+          'If a website, social post, or upload claims that a download will unlock secret units, unlimited Gems, or private codes, assume it is unsafe unless the official developer has published it through Roblox-connected channels.',
         ],
       },
       {

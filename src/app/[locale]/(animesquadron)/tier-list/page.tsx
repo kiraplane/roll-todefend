@@ -18,6 +18,11 @@ const faqs = [
       'Early data is still forming, so the safest answer is the unit that acts as your main carry and clears the next wave or boss wall.',
   },
   {
+    question: 'Should I follow a name-only Anime Squadron tier list?',
+    answer:
+      'Use name rankings only after checking the role. A unit is worth building when it solves your current wave, boss, farm, or support problem.',
+  },
+  {
     question: 'Why does this tier list rank roles?',
     answer:
       'Role rankings avoid inventing unit-name data while Anime Squadron is still in early access. They still tell you where to spend first.',
@@ -105,6 +110,46 @@ export default function TierListPage() {
             </Button>
             <Button asChild variant="outline">
               <LocaleLink href="/traits">Plan traits</LocaleLink>
+            </Button>
+          </div>
+        </section>
+
+        <section className="rounded-lg border border-[#3A2A24] bg-[#130D0B] p-6">
+          <h2 className="font-display text-2xl font-bold">
+            Current build route
+          </h2>
+          <div className="mt-4 grid gap-4 text-sm leading-7 text-[#D5C6B7] md:grid-cols-3">
+            <p>
+              <strong className="text-[#FFF5EA]">Start with one carry.</strong>{' '}
+              Your first real unit investment should clear waves or bosses
+              better than the rest of the account.
+            </p>
+            <p>
+              <strong className="text-[#FFF5EA]">Delay luxury rerolls.</strong>{' '}
+              Perfect Cubes, Trait Shards, and Reroll Cubes are strongest after
+              a keeper unit is obvious.
+            </p>
+            <p>
+              <strong className="text-[#FFF5EA]">
+                Patch the visible wall.
+              </strong>{' '}
+              Add boss damage, control, support, or economy only when that role
+              fixes the run you are losing.
+            </p>
+          </div>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <Button asChild variant="outline">
+              <LocaleLink href="/guides/best-units-tier-list">
+                Read best units guide
+              </LocaleLink>
+            </Button>
+            <Button asChild variant="outline">
+              <LocaleLink href="/guides/secret-units-guide">
+                Secret units guide
+              </LocaleLink>
+            </Button>
+            <Button asChild variant="outline">
+              <LocaleLink href="/codes">Redeem codes first</LocaleLink>
             </Button>
           </div>
         </section>

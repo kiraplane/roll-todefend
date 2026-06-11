@@ -94,6 +94,11 @@ export default function RerollPage() {
           <Button asChild variant="outline">
             <LocaleLink href="/traits">Open traits</LocaleLink>
           </Button>
+          <Button asChild variant="outline">
+            <LocaleLink href="/guides/trait-shards-reroll-cubes-farm">
+              Trait Shards farm
+            </LocaleLink>
+          </Button>
         </div>
 
         <FaqSection

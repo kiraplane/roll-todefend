@@ -37,7 +37,8 @@ export default function GuidesPage() {
           </h1>
           <p className="text-lg leading-8 text-[#D5C6B7]">
             Decision-first guides for active codes, beginner progression, units,
-            traits, rerolls, game modes, Discord links, and safe Roblox access.
+            secret units, traits, rerolls, farming, game modes, Discord links,
+            and safe Roblox access.
           </p>
         </header>
 
@@ -116,9 +117,9 @@ export default function GuidesPage() {
                 'Only when source data supports them. Early pages use role-based recommendations to avoid fake unit rankings.',
             },
             {
-              question: 'Do guides use YouTube walkthrough signals?',
+              question: 'Do guides include walkthrough support?',
               answer:
-                'Yes. Core guides now use YouTube search intent as a cross-check, with selected walkthrough embeds on pages where a relevant Anime Squadron video is available.',
+                'Yes. Core guides include selected walkthrough embeds when they help explain progression, unit roles, codes, or account planning.',
             },
           ]}
         />

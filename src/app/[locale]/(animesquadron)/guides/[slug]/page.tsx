@@ -23,6 +23,8 @@ const relatedRouteLabels: Record<string, string> = {
   '/download': 'Download',
   '/game-modes': 'Game Modes',
   '/guides/beginner-guide': 'Beginner Guide',
+  '/guides/secret-units-guide': 'Secret Units',
+  '/guides/trait-shards-reroll-cubes-farm': 'Trait Shards Farm',
   '/reroll': 'Reroll',
   '/tier-list': 'Tier List',
   '/traits': 'Traits',

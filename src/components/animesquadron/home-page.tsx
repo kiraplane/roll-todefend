@@ -144,12 +144,20 @@ const guideKeywordLinks = [
     href: '/guides/best-units-tier-list',
   },
   {
+    keyword: 'Anime Squadron secret units guide',
+    href: '/guides/secret-units-guide',
+  },
+  {
     keyword: 'Anime Squadron traits guide',
     href: '/guides/traits-reroll-guide',
   },
   {
     keyword: 'Anime Squadron stat reroll guide',
     href: '/guides/stat-reroll-guide',
+  },
+  {
+    keyword: 'Anime Squadron Trait Shards farm',
+    href: '/guides/trait-shards-reroll-cubes-farm',
   },
   {
     keyword: 'Anime Squadron Gems and Gold guide',
@@ -293,16 +301,16 @@ export function AnimeSquadronHomePage() {
         <Container className="grid gap-6 px-4 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="font-semibold uppercase tracking-[0.18em] text-[#37D6D0]">
-              Quick answer
+              Launch route
             </p>
             <h2 className="mt-2 font-display text-3xl font-black">
               Redeem codes, build one carry, protect Perfect Cubes
             </h2>
             <p className="mt-4 text-sm leading-7 text-[#D5C6B7]">
               Anime Squadron is still in early access, so the best launch plan
-              is conservative: use codes first, test your summons, upgrade one
-              main damage unit, and wait before spending rare reroll materials
-              on filler.
+              is conservative: redeem the newest codes first, test your summons,
+              upgrade one main damage unit, and wait before spending rare reroll
+              materials on filler.
             </p>
           </div>
 
