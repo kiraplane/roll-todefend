@@ -427,6 +427,10 @@ const en: PageCopy = {
         label: 'Confidence:',
         body: 'whether the recommendation is official, cross-checked, or still pending launch data.',
       },
+      {
+        label: 'Search demand:',
+        body: 'whether players are looking for a unit-name answer, a role answer, or a reroll decision before spending.',
+      },
     ],
     unitsButton: 'Open units guide',
     traitsButton: 'Plan traits',
@@ -443,6 +447,10 @@ const en: PageCopy = {
       {
         label: 'Patch the visible wall.',
         body: 'Add boss damage, control, support, or economy only when that role fixes the run you are losing.',
+      },
+      {
+        label: 'Treat name lists as leads.',
+        body: 'If another tier list ranks a specific anime unit highly, check whether it fills your missing role before replacing a working carry.',
       },
     ],
     bestUnitsButton: 'Read best units guide',
@@ -470,6 +478,12 @@ const en: PageCopy = {
         question: 'Should I follow a name-only Anime Squadron tier list?',
         answer:
           'Use name rankings only after checking the role. A unit is worth building when it solves your current wave, boss, farm, or support problem.',
+      },
+      {
+        question:
+          'What should I do when two Anime Squadron tier lists disagree?',
+        answer:
+          'Keep the unit that solves your current clear first, then compare reroll cost, trait quality, and whether the disagreement is about early waves, bosses, or late scaling.',
       },
       {
         question: 'Should I chase a single Anime Squadron unit name first?',

@@ -1,11 +1,11 @@
 import { sources } from './sources';
 import type { GameCode } from './types';
 
-export const CODE_CHECKED_AT = '2026-06-16';
+export const CODE_CHECKED_AT = '2026-06-17';
 
-const threeSourceLabel = `${sources.beebomCodes.label}, ${sources.destructoidCodes.label}, ${sources.proGameGuidesCodes.label}`;
-const inactiveConflictLabel = `${sources.destructoidCodes.label}, ${sources.proGameGuidesCodes.label}; ${sources.beebomCodes.label} still lists it`;
-const newestSourceLabel = `${sources.beebomCodes.label}, ${sources.destructoidCodes.label}, ${sources.proGameGuidesCodes.label}, ${sources.pcgamesnCodes.label}, ${sources.pocketTacticsCodes.label}`;
+const coreSourceLabel = `${sources.beebomCodes.label}, ${sources.destructoidCodes.label}, ${sources.proGameGuidesCodes.label}, ${sources.radioTimesCodes.label}`;
+const inactiveConflictLabel = `${sources.destructoidCodes.label}, ${sources.proGameGuidesCodes.label}, ${sources.radioTimesCodes.label}; ${sources.beebomCodes.label} or ${sources.pcgamesnCodes.label} may still list some older codes`;
+const newestSourceLabel = `${sources.beebomCodes.label}, ${sources.destructoidCodes.label}, ${sources.proGameGuidesCodes.label}, ${sources.pcgamesnCodes.label}, ${sources.pocketTacticsCodes.label}, ${sources.radioTimesCodes.label}`;
 
 export const codes: GameCode[] = [
   {
@@ -16,7 +16,7 @@ export const codes: GameCode[] = [
     lastChecked: CODE_CHECKED_AT,
     sourceLabel: newestSourceLabel,
     notes:
-      'Newest CCU milestone code found across current June 16 source checks. Some sources mention a level 10 requirement.',
+      'Newest CCU milestone code found across current June 17 source checks. Some sources mention a level 10 requirement.',
   },
   {
     code: '5kInterested!',
@@ -26,7 +26,7 @@ export const codes: GameCode[] = [
     lastChecked: CODE_CHECKED_AT,
     sourceLabel: newestSourceLabel,
     notes:
-      'New interest milestone code cross-checked across Beebom, Destructoid, Pro Game Guides, PCGamesN, and Pocket Tactics.',
+      'New interest milestone code cross-checked across Beebom, Destructoid, Pro Game Guides, PCGamesN, Pocket Tactics, and Radio Times.',
   },
   {
     code: 'Tysm30KCCU!',
@@ -34,9 +34,9 @@ export const codes: GameCode[] = [
     status: 'active',
     firstSeen: '2026-06-14',
     lastChecked: CODE_CHECKED_AT,
-    sourceLabel: threeSourceLabel,
+    sourceLabel: coreSourceLabel,
     notes:
-      'Newest CCU milestone code found across Beebom, Destructoid, and Pro Game Guides during the June 15 source check.',
+      'CCU milestone code still appears active across the June 17 source check.',
   },
   {
     code: 'Release!',
@@ -44,9 +44,8 @@ export const codes: GameCode[] = [
     status: 'active',
     firstSeen: '2026-06-14',
     lastChecked: CODE_CHECKED_AT,
-    sourceLabel: threeSourceLabel,
-    notes:
-      'Release code cross-checked across three current June 2026 code trackers.',
+    sourceLabel: coreSourceLabel,
+    notes: 'Release code cross-checked across current June 2026 code trackers.',
   },
   {
     code: 'CRAZYSUPPORT!',
@@ -54,9 +53,9 @@ export const codes: GameCode[] = [
     status: 'active',
     firstSeen: '2026-06-14',
     lastChecked: CODE_CHECKED_AT,
-    sourceLabel: threeSourceLabel,
+    sourceLabel: coreSourceLabel,
     notes:
-      'Current support milestone code listed by all three checked code trackers.',
+      'Current support milestone code listed by the checked code trackers.',
   },
   {
     code: 'EverythingIsPartOfMyPlan!',
@@ -64,7 +63,7 @@ export const codes: GameCode[] = [
     status: 'active',
     firstSeen: '2026-06-14',
     lastChecked: CODE_CHECKED_AT,
-    sourceLabel: threeSourceLabel,
+    sourceLabel: coreSourceLabel,
     notes:
       'Trait Shard code listed as active across the current June 2026 source check.',
   },
@@ -74,7 +73,7 @@ export const codes: GameCode[] = [
     status: 'active',
     firstSeen: '2026-06-14',
     lastChecked: CODE_CHECKED_AT,
-    sourceLabel: threeSourceLabel,
+    sourceLabel: coreSourceLabel,
     notes:
       'Perfect Cube code listed as active across the current June 2026 source check.',
   },
@@ -84,9 +83,9 @@ export const codes: GameCode[] = [
     status: 'active',
     firstSeen: '2026-06-14',
     lastChecked: CODE_CHECKED_AT,
-    sourceLabel: threeSourceLabel,
+    sourceLabel: coreSourceLabel,
     notes:
-      'Maintenance compensation code listed as active across Beebom, Destructoid, and Pro Game Guides.',
+      'Maintenance compensation code listed as active across Beebom, Destructoid, Pro Game Guides, and Radio Times.',
   },
   {
     code: 'Tysm10kCCU!',
@@ -214,11 +213,12 @@ export const codeCheckSummary = {
     sources.proGameGuidesCodes,
     sources.pcgamesnCodes,
     sources.pocketTacticsCodes,
+    sources.radioTimesCodes,
   ],
   reviewNotes: [
     'Anime Squadron codes are case-sensitive; copy them exactly, including punctuation.',
     'Redeem 40kCCU and 5kInterested first because they are the newest cross-checked additions.',
-    'Tysm10kCCU remains expired here because Pro Game Guides and Destructoid list it inactive, even though some trackers still show it active.',
+    'Tysm10kCCU remains expired here because Pro Game Guides, Destructoid, and Radio Times list it inactive, even though some trackers still show it active.',
     'Older launch codes stay out of the active table unless at least two current sources agree they still work.',
     'Use codes before rerolling traits or stats so the free shards, cubes, gems, and gold shape your first real spend.',
     'If a code fails, rejoin a fresh server and retry before assuming it is expired.',
