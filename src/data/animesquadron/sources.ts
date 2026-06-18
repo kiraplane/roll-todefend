@@ -23,9 +23,9 @@ export const sources = {
     type: 'guide_site',
     label: 'Beebom Anime Squadron codes',
     url: 'https://beebom.com/anime-squadron-codes/',
-    checkedAt: '2026-06-17',
+    checkedAt: '2026-06-19',
     confidence: 'medium',
-    note: 'Rechecked June 17, 2026. Used as a code and redeem-flow cross-check, not copied as article prose.',
+    note: 'Rechecked June 19, 2026. Used as a code and redeem-flow cross-check, not copied as article prose.',
   },
   destructoidCodes: {
     type: 'guide_site',
@@ -39,9 +39,9 @@ export const sources = {
     type: 'guide_site',
     label: 'Pro Game Guides Anime Squadron codes',
     url: 'https://progameguides.com/roblox/anime-squadron-codes/',
-    checkedAt: '2026-06-17',
+    checkedAt: '2026-06-19',
     confidence: 'medium',
-    note: 'Rechecked June 17, 2026. Used for active-code overlap, inactive-code checks, and launch-stage search demand.',
+    note: 'Rechecked June 19, 2026. Used for active-code overlap, inactive-code checks, and launch-stage search demand.',
   },
   pcgamesnCodes: {
     type: 'guide_site',
@@ -49,7 +49,7 @@ export const sources = {
     url: 'https://www.pcgamesn.com/anime-squadron/codes',
     checkedAt: '2026-06-17',
     confidence: 'medium',
-    note: 'Checked June 17, 2026. Used to cross-check the newest 40kCCU and 5kInterested code additions.',
+    note: 'Checked June 17, 2026. Used to cross-check the 40kCCU and 5kInterested code additions.',
   },
   pocketTacticsCodes: {
     type: 'guide_site',

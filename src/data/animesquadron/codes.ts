@@ -1,13 +1,35 @@
 import { sources } from './sources';
 import type { GameCode } from './types';
 
-export const CODE_CHECKED_AT = '2026-06-17';
+export const CODE_CHECKED_AT = '2026-06-19';
 
 const coreSourceLabel = `${sources.beebomCodes.label}, ${sources.destructoidCodes.label}, ${sources.proGameGuidesCodes.label}, ${sources.radioTimesCodes.label}`;
 const inactiveConflictLabel = `${sources.destructoidCodes.label}, ${sources.proGameGuidesCodes.label}, ${sources.radioTimesCodes.label}; ${sources.beebomCodes.label} or ${sources.pcgamesnCodes.label} may still list some older codes`;
 const newestSourceLabel = `${sources.beebomCodes.label}, ${sources.destructoidCodes.label}, ${sources.proGameGuidesCodes.label}, ${sources.pcgamesnCodes.label}, ${sources.pocketTacticsCodes.label}, ${sources.radioTimesCodes.label}`;
+const june19SourceLabel = `${sources.beebomCodes.label}, ${sources.proGameGuidesCodes.label}`;
 
 export const codes: GameCode[] = [
+  {
+    code: '50kCCU!',
+    reward:
+      '100 Trait Shards, 1,000 Gold, 2,000 Gems, 25 Stat Cubes, and 2 Perfect Cubes',
+    status: 'active',
+    firstSeen: '2026-06-19',
+    lastChecked: CODE_CHECKED_AT,
+    sourceLabel: june19SourceLabel,
+    notes:
+      'New June 19 source-checked CCU milestone code. Beebom uses 50kCCU casing; Pro Game Guides also lists the code but has mixed casing in surrounding copy, so copy exactly from the active table before trying variants.',
+  },
+  {
+    code: '10MilVisits!',
+    reward: '50 Trait Shards and 2,000 Gold',
+    status: 'active',
+    firstSeen: '2026-06-19',
+    lastChecked: CODE_CHECKED_AT,
+    sourceLabel: june19SourceLabel,
+    notes:
+      'New June 19 source-checked visit milestone code listed by Beebom and Pro Game Guides.',
+  },
   {
     code: '40kCCU!',
     reward: '40 Trait Rerolls, 3,500 Gems, 30 Stat Cubes, and 20 Zeni',
@@ -217,7 +239,7 @@ export const codeCheckSummary = {
   ],
   reviewNotes: [
     'Anime Squadron codes are case-sensitive; copy them exactly, including punctuation.',
-    'Redeem 40kCCU and 5kInterested first because they are the newest cross-checked additions.',
+    'Redeem 50kCCU and 10MilVisits first because they are the newest source-checked additions.',
     'Tysm10kCCU remains expired here because Pro Game Guides, Destructoid, and Radio Times list it inactive, even though some trackers still show it active.',
     'Older launch codes stay out of the active table unless at least two current sources agree they still work.',
     'Use codes before rerolling traits or stats so the free shards, cubes, gems, and gold shape your first real spend.',

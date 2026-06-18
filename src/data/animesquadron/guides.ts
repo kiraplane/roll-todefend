@@ -1319,6 +1319,90 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    slug: 'gear-crafting-guide',
+    title: 'Anime Squadron Gear Crafting Guide',
+    seoTitle: 'Anime Squadron Gear Guide - Crafting Recipes and Unit Fit',
+    seoDescription:
+      'Plan Anime Squadron gear crafting with recipe caution, material routing, best-unit fit, reroll timing, and when to craft or wait.',
+    summary:
+      'Gear should support a unit that already has a job. Craft after you know the carry, role, and bottleneck instead of spending materials on the first recipe you see.',
+    category: 'Units',
+    difficulty: 'Intermediate',
+    coverImageUrl: cover,
+    publishedAt: CHECKED_AT,
+    updatedAt: '2026-06-19',
+    sourceStrategy: 'guide_site_crosscheck',
+    sourceNotes:
+      'Created from current gear and crafting recipe demand. Competitor recipe pages are used as leads; exact recipe values should be verified before turning this into a fixed database.',
+    videoSearchQueries: [
+      'Anime Squadron gear guide',
+      'Anime Squadron gear crafting recipes',
+      'Anime Squadron best gear',
+      'Anime Squadron crafting materials',
+    ],
+    tags: ['Gear', 'Crafting', 'Units'],
+    relatedRoutes: [
+      '/units',
+      '/tier-list',
+      '/traits',
+      '/reroll',
+      '/guides/best-units-tier-list',
+    ],
+    body: [
+      {
+        heading: 'Craft gear after the unit has a role',
+        paragraphs: [
+          'Gear is tempting because it looks like a direct power upgrade, but the best first question is still role fit. A main carry, boss-damage unit, control unit, and economy unit do not need the same gear priority.',
+          'Before crafting, decide whether the target unit is staying in your squad for multiple clears. If the unit is a temporary story helper, save rare materials until the account has a clearer carry or support plan.',
+        ],
+      },
+      {
+        heading: 'Use recipes as a spending plan',
+        paragraphs: [
+          'Current search demand around gear crafting recipes means players want exact tables. The safer route is to use recipes as a plan first: identify the missing material, the unit role it helps, and the run where the craft should matter.',
+          'Do not craft every recipe just because it appears in a guide. Craft the item that changes your next wall, then test the run before spending again.',
+        ],
+        bullets: [
+          'Damage gear belongs on a unit that actually carries waves or bosses.',
+          'Support gear belongs on a unit that stays relevant during the whole run.',
+          'Control value matters when enemies leak before damage can finish.',
+          'Hold rare materials when the unit may be replaced soon.',
+        ],
+      },
+      {
+        heading: 'Pair gear with traits and rerolls',
+        paragraphs: [
+          'Gear, traits, and stat rerolls should point in the same direction. A boss unit with damage gear but a weak trait may still underperform. A control unit with the wrong gear may survive but fail to change the wave.',
+          'The practical order is: choose the unit, confirm the role, set a reroll stop rule, then craft gear that reinforces that role. If the role changes, pause before adding more materials.',
+        ],
+      },
+      {
+        heading: 'When this should become a recipe database',
+        paragraphs: [
+          'A full gear database is worth building only after recipes, material names, and patch behavior are stable enough to maintain. Until then, this page should teach the crafting decision and link players to units, tier list, traits, and reroll planning.',
+          'If gear search demand keeps growing and reliable recipe data stays consistent across official or high-confidence sources, the next step is a structured gear table with material, role, target unit type, and confidence notes.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'What gear should I craft first in Anime Squadron?',
+        answer:
+          'Craft gear for the unit that already solves your current wall. For most players that means the main carry or the support that keeps the carry working.',
+      },
+      {
+        question: 'Are Anime Squadron gear recipes final?',
+        answer:
+          'Treat recipe pages as current leads unless the game UI or official notes confirm them. Recipes can change during live updates.',
+      },
+      {
+        question: 'Should I craft gear before rerolling traits?',
+        answer:
+          'Usually choose the unit and role first, set a practical reroll stop rule, then craft gear that supports the same role.',
+      },
+    ],
+  },
 ];
 
 export function getGuide(slug: string) {
