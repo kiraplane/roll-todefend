@@ -96,7 +96,7 @@ function readEnv(name: string) {
 }
 
 export function isAdsterraEnabled() {
-  return readEnv('ADSTERRA_ADS_ENABLED') !== 'false';
+  return readEnv('ADSTERRA_ADS_ENABLED').toLowerCase() === 'true';
 }
 
 export function getAdsterraSlot(id: AdsterraSlotId): AdsterraSlotConfig {
