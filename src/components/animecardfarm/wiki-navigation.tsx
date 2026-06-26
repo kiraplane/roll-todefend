@@ -1,15 +1,18 @@
 'use client';
 
 import { Badge } from '@/components/ui/badge';
+import { activeCodes } from '@/data/animecardfarm/codes';
 import { LocaleLink, useLocalePathname } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import {
   ArrowRight,
   BookOpen,
   Boxes,
+  Check,
   ChevronDown,
   CircleHelp,
   Compass,
+  Copy,
   Download,
   Layers3,
   ListChecks,
@@ -18,6 +21,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 import type { ReactNode } from 'react';
+import { useState } from 'react';
 
 interface WikiNavLink {
   href: string;
@@ -132,6 +136,65 @@ function WikiNavLinkItem({
   );
 }
 
+function SidebarCodeCopyButton({ code }: { code: string }) {
+  const [copied, setCopied] = useState(false);
+
+  return (
+    <button
+      type="button"
+      aria-label={`Copy ${code}`}
+      className="rounded-sm p-1 text-[#B8C8D8] transition hover:bg-[#14243A] hover:text-[#67F7D3]"
+      onClick={async () => {
+        await navigator.clipboard.writeText(code);
+        setCopied(true);
+        window.setTimeout(() => setCopied(false), 1200);
+      }}
+    >
+      {copied ? <Check className="size-4" /> : <Copy className="size-4" />}
+    </button>
+  );
+}
+
+function ActiveCodesSidebarCard() {
+  return (
+    <div className="rounded-lg border border-[#27415F] bg-[#080D17] p-4">
+      <div className="mb-4 flex items-center justify-between gap-3">
+        <h2 className="font-display font-bold text-[#F6FBFF] text-lg">
+          Active Codes
+        </h2>
+        <Badge className="bg-[#FF4FD8] text-[#07101C]">
+          {activeCodes.length}
+        </Badge>
+      </div>
+      <div className="space-y-3">
+        {activeCodes.slice(0, 5).map((item) => (
+          <div
+            key={item.code}
+            className="flex items-start justify-between gap-3"
+          >
+            <div className="min-w-0">
+              <p className="break-all font-mono font-semibold text-[#F6FBFF] text-sm">
+                {item.code}
+              </p>
+              <p className="mt-1 line-clamp-2 text-[#B8C8D8] text-xs leading-5">
+                {item.reward}
+              </p>
+            </div>
+            <SidebarCodeCopyButton code={item.code} />
+          </div>
+        ))}
+      </div>
+      <LocaleLink
+        href="/codes"
+        className="mt-4 flex items-center justify-center gap-2 border-[#27415F] border-t pt-3 font-medium text-[#D7E7F5] text-sm transition hover:text-[#67F7D3]"
+      >
+        View all codes
+        <ArrowRight className="size-4" />
+      </LocaleLink>
+    </div>
+  );
+}
+
 export function AnimeCardFarmMobileMenu({
   currentPath,
 }: {
@@ -234,6 +297,7 @@ export function AnimeCardFarmRouteSidebar({
             })}
           </div>
         </div>
+        <ActiveCodesSidebarCard />
         <div className="rounded-lg border border-[#27415F] bg-[#080D17] p-4 text-[#B8C8D8] text-sm leading-6">
           <div className="mb-2 flex items-center gap-2 font-semibold text-[#F6FBFF]">
             <ShieldQuestion className="size-4 text-[#67F7D3]" />

@@ -8,10 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { activeCodes } from '@/data/animecardfarm/codes';
 import { guides, siteDescription } from '@/data/animecardfarm/guides';
-import {
-  officialGameFacts,
-  officialQuickLinks,
-} from '@/data/animecardfarm/sources';
+import { officialGameFacts } from '@/data/animecardfarm/sources';
 import { topicPageList } from '@/data/animecardfarm/topics';
 import { LocaleLink } from '@/i18n/navigation';
 import {
@@ -22,6 +19,7 @@ import {
   Coins,
   Download,
   ExternalLink,
+  Play,
   Sparkles,
 } from 'lucide-react';
 import Image from 'next/image';
@@ -102,8 +100,28 @@ const startSteps = [
   },
 ];
 
+const latestUpdateItems = [
+  {
+    title: 'Roblox universe refresh',
+    date: officialGameFacts.updatedAt.slice(0, 10),
+    body: 'The official Roblox experience was refreshed before this wiki pass. Use the official place as the source of truth for live game state.',
+  },
+  {
+    title: 'Codes watch is live',
+    date:
+      activeCodes[0]?.lastChecked ?? officialGameFacts.updatedAt.slice(0, 10),
+    body: `${activeCodes.length} active codes are source-checked, with TRAIT! kept separate as a spelling watch item.`,
+  },
+  {
+    title: 'Wrong-game filter added',
+    date: officialGameFacts.updatedAt.slice(0, 10),
+    body: 'Anime Card Clash and Anime Card Collection results are intentionally separated from Anime Card Farm pages.',
+  },
+];
+
 export function AnimeCardFarmHomePage() {
   const latestGuides = guides.slice(0, 6);
+  const featuredVideo = guides.find((guide) => guide.video)?.video;
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -219,43 +237,33 @@ export function AnimeCardFarmHomePage() {
             </div>
 
             <aside
-              aria-label="Anime Card Farm status"
+              aria-label="Anime Card Farm guide video"
               className="rounded-lg border border-[#27415F] bg-[#080D17]/85 p-4 shadow-2xl"
             >
-              <div className="grid gap-3 text-sm">
-                <div className="flex items-center justify-between gap-3 rounded-md border border-[#27415F] bg-[#101827] p-3">
-                  <span className="text-[#B8C8D8]">Roblox visits</span>
-                  <strong className="text-[#67F7D3]">
-                    {officialGameFacts.visitsAtCheck.toLocaleString()}
-                  </strong>
-                </div>
-                <div className="flex items-center justify-between gap-3 rounded-md border border-[#27415F] bg-[#101827] p-3">
-                  <span className="text-[#B8C8D8]">Live at check</span>
-                  <strong className="text-[#FFD35C]">
-                    {officialGameFacts.activePlayersAtCheck.toLocaleString()}
-                  </strong>
-                </div>
-                <div className="flex items-center justify-between gap-3 rounded-md border border-[#27415F] bg-[#101827] p-3">
-                  <span className="text-[#B8C8D8]">Active codes</span>
-                  <strong className="text-[#FF4FD8]">
-                    {activeCodes.length}
-                  </strong>
-                </div>
-              </div>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {officialQuickLinks.map((link) => (
+              {featuredVideo ? (
+                <div className="overflow-hidden rounded-md border border-[#27415F] bg-black">
+                  <iframe
+                    className="aspect-video w-full"
+                    src={`https://www.youtube.com/embed/${featuredVideo.id}`}
+                    title={featuredVideo.title}
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
                   <a
-                    key={link.label}
-                    href={link.href}
+                    href={featuredVideo.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1 rounded-md border border-[#27415F] px-3 py-2 text-[#D7E7F5] text-sm transition hover:border-[#67F7D3] hover:text-[#67F7D3]"
+                    className="flex items-center justify-between gap-3 bg-[#101827] px-3 py-2 text-[#B8C8D8] text-xs transition hover:text-[#67F7D3]"
                   >
-                    {link.label}
-                    <ExternalLink className="size-3" />
+                    <span className="inline-flex min-w-0 items-center gap-2">
+                      <Play className="size-3 shrink-0 text-[#FF4FD8]" />
+                      <span className="min-w-0 truncate">Guide video</span>
+                    </span>
+                    <ExternalLink className="size-3 shrink-0" />
                   </a>
-                ))}
-              </div>
+                </div>
+              ) : null}
             </aside>
           </div>
         </Container>
@@ -289,40 +297,88 @@ export function AnimeCardFarmHomePage() {
               ))}
             </section>
 
-            <section className="rounded-lg border border-[#27415F] bg-[#101827] p-6">
-              <div className="flex flex-wrap items-center justify-between gap-4">
-                <div>
-                  <p className="font-semibold text-[#67F7D3] text-xs uppercase tracking-[0.18em]">
-                    Start Here
-                  </p>
-                  <h2 className="mt-2 font-display text-3xl font-black">
-                    First-session farm path
-                  </h2>
-                </div>
-                <Coins className="size-8 text-[#FFD35C]" />
-              </div>
-              <div className="mt-6 grid gap-4 md:grid-cols-2">
-                {startSteps.map((step, index) => (
-                  <LocaleLink
-                    key={step.title}
-                    href={step.href}
-                    className="group rounded-lg border border-[#27415F] bg-[#080D17] p-4 transition hover:border-[#FF4FD8]"
+            <section className="grid gap-5 lg:grid-cols-2">
+              <div className="rounded-lg border border-[#27415F] bg-[#101827] p-6">
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                  <div>
+                    <p className="font-semibold text-[#67F7D3] text-xs uppercase tracking-[0.18em]">
+                      Latest Game Updates
+                    </p>
+                    <h2 className="mt-2 font-display text-3xl font-black">
+                      Live wiki pulse
+                    </h2>
+                  </div>
+                  <Button
+                    asChild
+                    variant="ghost"
+                    className="text-[#D7E7F5] hover:text-[#67F7D3]"
                   >
-                    <div className="flex gap-3">
-                      <span className="flex size-8 shrink-0 items-center justify-center rounded-md bg-[#FF4FD8] font-bold text-[#07101C]">
+                    <LocaleLink href="/updates">
+                      All updates
+                      <ArrowRight className="size-4" />
+                    </LocaleLink>
+                  </Button>
+                </div>
+
+                <div className="mt-6 space-y-5">
+                  {latestUpdateItems.map((item) => (
+                    <LocaleLink
+                      key={item.title}
+                      href="/updates"
+                      className="group grid gap-3 rounded-md border border-transparent p-2 transition hover:border-[#27415F] hover:bg-[#080D17]"
+                    >
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="min-w-0">
+                          <h3 className="font-display font-bold text-[#FFF6D6]">
+                            {item.title}
+                          </h3>
+                          <p className="mt-2 text-[#B8C8D8] text-sm leading-6">
+                            {item.body}
+                          </p>
+                        </div>
+                        <time className="shrink-0 text-[#B8C8D8] text-xs">
+                          {item.date}
+                        </time>
+                      </div>
+                    </LocaleLink>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-lg border border-[#27415F] bg-[#101827] p-6">
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                  <div>
+                    <p className="font-semibold text-[#FFD35C] text-xs uppercase tracking-[0.18em]">
+                      Start Here
+                    </p>
+                    <h2 className="mt-2 font-display text-3xl font-black">
+                      Your first farm route
+                    </h2>
+                  </div>
+                  <Coins className="size-8 text-[#FFD35C]" />
+                </div>
+                <div className="mt-6 space-y-4">
+                  {startSteps.map((step, index) => (
+                    <LocaleLink
+                      key={step.title}
+                      href={step.href}
+                      className="group flex gap-3 rounded-lg border border-transparent p-2 transition hover:border-[#27415F] hover:bg-[#080D17]"
+                    >
+                      <span className="flex size-8 shrink-0 items-center justify-center rounded-full border border-[#FF4FD8] text-[#D7E7F5]">
                         {index + 1}
                       </span>
                       <div className="min-w-0">
-                        <h3 className="font-display font-bold text-[#F6FBFF] text-lg">
+                        <h3 className="font-display font-bold text-[#F6FBFF]">
                           {step.title}
                         </h3>
                         <p className="mt-1 text-[#B8C8D8] text-sm leading-6">
                           {step.body}
                         </p>
                       </div>
-                    </div>
-                  </LocaleLink>
-                ))}
+                      <ArrowRight className="ml-auto mt-2 size-4 shrink-0 text-[#67F7D3] transition group-hover:translate-x-0.5" />
+                    </LocaleLink>
+                  ))}
+                </div>
               </div>
             </section>
 

@@ -6,37 +6,14 @@ import { FaqSection } from '@/components/animecardfarm/faq-section';
 import Container from '@/components/layout/container';
 import { JsonLd } from '@/components/seo/json-ld';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import {
-  getGuide,
-  guides,
-  relatedRouteLabels,
-} from '@/data/animecardfarm/guides';
+import { getGuide, guides } from '@/data/animecardfarm/guides';
 import { officialGameFacts } from '@/data/animecardfarm/sources';
-import { LocaleLink } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
 import { constructMetadata } from '@/lib/metadata';
 import type { Metadata } from 'next';
 import type { Locale } from 'next-intl';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-
-function getRelatedRouteLabel(route: string) {
-  return (
-    relatedRouteLabels[route] ??
-    route
-      .replace(/^\/+/, '')
-      .split('/')
-      .filter(Boolean)
-      .map((segment) =>
-        segment
-          .split('-')
-          .map((word) => `${word.charAt(0).toUpperCase()}${word.slice(1)}`)
-          .join(' ')
-      )
-      .join(' ')
-  );
-}
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -118,7 +95,7 @@ export default async function GuidePage({
     <div className="bg-[#080D17] py-12 text-[#F6FBFF]">
       <JsonLd data={jsonLd} />
       <AdsterraSideRails />
-      <Container className="grid gap-8 px-4 lg:grid-cols-[1fr_300px]">
+      <Container className="px-4">
         <article className="rounded-lg border border-[#27415F] bg-[#101827] p-6 md:p-8">
           <div className="flex flex-wrap gap-2">
             <Badge className="bg-[#FF4FD8] text-[#07101C]">
@@ -211,33 +188,6 @@ export default async function GuidePage({
             <FaqSection items={guide.faq} />
           </div>
         </article>
-
-        <aside className="space-y-4">
-          <div className="rounded-lg border border-[#27415F] bg-[#101827] p-5">
-            <h2 className="font-display text-xl font-bold">Related pages</h2>
-            <div className="mt-4 grid gap-2">
-              {guide.relatedRoutes.map((route) => (
-                <Button
-                  key={route}
-                  asChild
-                  variant="outline"
-                  className="h-auto min-w-0 justify-start whitespace-normal border-[#27415F] bg-[#080D17] text-left text-[#B8C8D8] hover:border-[#67F7D3] hover:text-[#67F7D3]"
-                >
-                  <LocaleLink href={route}>
-                    <span className="min-w-0 break-words">
-                      {getRelatedRouteLabel(route)}
-                    </span>
-                  </LocaleLink>
-                </Button>
-              ))}
-            </div>
-          </div>
-          <div className="rounded-lg border border-[#27415F] bg-[#080D17] p-5 text-[#B8C8D8] text-sm leading-6">
-            Current public data is still thin. This guide avoids copied Anime
-            Card Clash or Anime Card Collection facts unless the source
-            specifically matches Anime Card Farm.
-          </div>
-        </aside>
       </Container>
     </div>
   );
