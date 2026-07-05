@@ -182,8 +182,8 @@ Homepage should stay compact and guide-first, with official gameplay media visib
 
 The requirements ask for GitHub, Cloudflare Workers, domain association, and GA setup. Those steps depend on available authenticated CLIs / accounts. If credentials are available locally, use:
 
-- GitHub repo target: `nophenia`
-- Cloudflare Worker/project target: `nophenia`
+- GitHub repo target: `roll-todefend`
+- Cloudflare Worker/project target: `roll-todefend`
 - Domain: `www.roll-todefend.wiki`
 - GA property: Roll to Defend Wiki
 
