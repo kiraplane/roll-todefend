@@ -1,4 +1,4 @@
-import { allCoreRoutes } from '@/data/animecardfarm/guides';
+import { allCoreRoutes } from '@/data/rolltodefend/guides';
 import { Routes } from '@/routes';
 import type { MetadataRoute } from 'next';
 import { routing } from '../i18n/routing';
@@ -31,9 +31,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           route === Routes.Root
             ? 1
             : route === Routes.Codes ||
-                route === Routes.Packs ||
-                route === Routes.Cards ||
-                route === Routes.Mutations ||
+                route === Routes.Units ||
+                route === Routes.TierList ||
+                route === Routes.Zones ||
+                route === Routes.Luck ||
+                route === Routes.Planner ||
                 route === Routes.Download ||
                 route === Routes.Updates
               ? 0.9

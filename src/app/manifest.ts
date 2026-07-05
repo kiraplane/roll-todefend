@@ -23,12 +23,12 @@ import type { MetadataRoute } from 'next';
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: defaultMessages.Metadata.name,
-    short_name: 'ACF Wiki',
+    short_name: 'RTD Wiki',
     description: defaultMessages.Metadata.description,
     start_url: '/',
     display: 'standalone',
-    background_color: '#080D17',
-    theme_color: '#67F7D3',
+    background_color: '#10140F',
+    theme_color: '#B7F44A',
     icons: [
       {
         src: '/favicon-32x32.png',

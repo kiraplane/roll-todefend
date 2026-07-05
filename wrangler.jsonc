@@ -1,20 +1,20 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
-  "name": "animecardfarm",
+  "name": "nophenia",
   "keep_vars": true,
   "compatibility_date": "2025-04-01",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "routes": [
     {
-      "pattern": "animecardfarm.wiki",
+      "pattern": "roll-todefend.wiki",
       "custom_domain": true,
-      "zone_name": "animecardfarm.wiki"
+      "zone_name": "roll-todefend.wiki"
     },
     {
-      "pattern": "www.animecardfarm.wiki",
+      "pattern": "www.roll-todefend.wiki",
       "custom_domain": true,
-      "zone_name": "animecardfarm.wiki"
+      "zone_name": "roll-todefend.wiki"
     }
   ],
   "build": {

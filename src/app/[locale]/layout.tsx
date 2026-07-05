@@ -6,7 +6,6 @@ import {
   fontNotoSansMono,
   fontNotoSerif,
 } from '@/assets/fonts';
-import GoogleAdsense from '@/components/ads/google-adsense';
 import AffonsoScript from '@/components/affiliate/affonso';
 import PromotekitScript from '@/components/affiliate/promotekit';
 import { TailwindIndicator } from '@/components/layout/tailwind-indicator';
@@ -43,9 +42,10 @@ const CLIENT_MESSAGE_NAMESPACES = [
 const MARKETING_NAVBAR_KEYS = [
   'home',
   'codes',
-  'packs',
-  'mutations',
-  'cards',
+  'units',
+  'zones',
+  'luck',
+  'planner',
   'discord',
   'guides',
   'download',
@@ -56,8 +56,8 @@ const MARKETING_FOOTER_KEYS = ['tagline', 'wiki', 'guides', 'legal'] as const;
 const MARKETING_FOOTER_GUIDE_ITEM_KEYS = [
   'all',
   'beginner',
-  'offlineMoney',
-  'packs',
+  'offlineIncome',
+  'zones',
 ] as const;
 
 function pickKeys<T extends MessageMap, K extends readonly string[]>(
@@ -131,16 +131,6 @@ export default async function LocaleLayout({
     <html suppressHydrationWarning lang={locale}>
       <head>
         <GoogleAnalytics />
-        <link
-          rel="preconnect"
-          href="https://pub-c1d54745e9b34241adf3297da6711a87.r2.dev"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="dns-prefetch"
-          href="https://pub-c1d54745e9b34241adf3297da6711a87.r2.dev"
-        />
-        <GoogleAdsense />
         <AffonsoScript />
         <PromotekitScript />
       </head>

@@ -22,19 +22,20 @@ const retiredPublicRouteRedirects: Array<{
   { pattern: /^\/admin(?:\/.*)?$/, target: '/' },
   { pattern: /^\/settings(?:\/.*)?$/, target: '/' },
   { pattern: /^\/payment(?:\/.*)?$/, target: '/' },
-  { pattern: /^\/units(?:\/.*)?$/, target: '/cards' },
-  { pattern: /^\/traits(?:\/.*)?$/, target: '/mutations' },
-  { pattern: /^\/trait-gems\/?$/, target: '/mutations' },
-  { pattern: /^\/game-modes\/?$/, target: '/guides/beginner-guide' },
-  { pattern: /^\/tierlist\/?$/, target: '/guides/best-cards-watch-guide' },
-  { pattern: /^\/tier-list\/?$/, target: '/guides/best-cards-watch-guide' },
-  { pattern: /^\/best-cards\/?$/, target: '/guides/best-cards-watch-guide' },
-  { pattern: /^\/cards-list\/?$/, target: '/cards' },
-  { pattern: /^\/card-list\/?$/, target: '/cards' },
+  { pattern: /^\/traits(?:\/.*)?$/, target: '/luck' },
+  { pattern: /^\/trait-gems\/?$/, target: '/luck' },
+  { pattern: /^\/game-modes\/?$/, target: '/guides/how-to-play' },
+  { pattern: /^\/tierlist\/?$/, target: '/tier-list' },
+  { pattern: /^\/best-units\/?$/, target: '/guides/best-units-watch-guide' },
+  { pattern: /^\/best-cards\/?$/, target: '/guides/best-units-watch-guide' },
+  { pattern: /^\/cards-list\/?$/, target: '/units' },
+  { pattern: /^\/card-list\/?$/, target: '/units' },
   { pattern: /^\/anime-card-farm-codes\/?$/, target: '/codes' },
   { pattern: /^\/anime-card-farm-code\/?$/, target: '/codes' },
-  { pattern: /^\/anime-card-farm-packs\/?$/, target: '/packs' },
+  { pattern: /^\/anime-card-farm-packs\/?$/, target: '/zones' },
   { pattern: /^\/anime-card-farm-discord\/?$/, target: '/discord' },
+  { pattern: /^\/roll-to-defend-codes\/?$/, target: '/codes' },
+  { pattern: /^\/roll-to-defend-code\/?$/, target: '/codes' },
   { pattern: /^\/discord-server\/?$/, target: '/discord' },
   { pattern: /^\/roblox\/?$/, target: '/download' },
 ];
@@ -64,8 +65,8 @@ export default async function middleware(req: NextRequest) {
   const hostname = hostHeader?.split(':')[0].toLowerCase();
   const forwardedProto = req.headers.get('x-forwarded-proto');
   const productionHosts = new Set([
-    'animecardfarm.wiki',
-    'www.animecardfarm.wiki',
+    'roll-todefend.wiki',
+    'www.roll-todefend.wiki',
   ]);
 
   if (

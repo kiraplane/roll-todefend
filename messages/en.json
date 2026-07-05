@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "name": "Anime Card Farm Wiki",
-    "title": "Anime Card Farm Wiki - Codes, Packs, Cards and Roblox Guide",
-    "description": "Anime Card Farm Wiki for Roblox codes, packs, card upgrades, offline money, mutations, trait gems, Discord, and safe official links."
+    "name": "Roll to Defend Wiki",
+    "title": "Roll to Defend Wiki - Codes, Units, Zones and Roblox Guide",
+    "description": "Roll to Defend Wiki for Roblox codes, units, zombie waves, zones, luck boosts, offline income, Discord, and safe official links."
   },
   "Common": {
     "premium": "Premium",
@@ -54,7 +54,7 @@
   },
   "PricingPage": {
     "title": "Pricing",
-    "description": "Optional supporter plans for keeping Anime Card Farm Wiki maintained",
+    "description": "Optional supporter plans for keeping Roll to Defend Wiki maintained",
     "subtitle": "Simple support options for readers who want to help maintain source-checked guides and data updates",
     "monthly": "Monthly",
     "yearly": "Yearly",
@@ -80,11 +80,11 @@
   "PricePlans": {
     "free": {
       "name": "Free",
-      "description": "Browse Anime Card Farm Wiki with no payment required",
+      "description": "Browse Roll to Defend Wiki with no payment required",
       "features": {
-        "feature-1": "Anime Card Farm code status and redemption notes",
-        "feature-2": "Packs, upgrades, offline money, and mutation guidance",
-        "feature-3": "Guides for codes, cards, Discord links, and beginner progression",
+        "feature-1": "Roll to Defend code status and redemption notes",
+        "feature-2": "Units, zones, luck, offline income, and upgrade guidance",
+        "feature-3": "Guides for codes, Discord links, scripts safety, and beginner progression",
         "feature-4": "Core pages updated as game information changes"
       },
       "limits": {
@@ -99,7 +99,7 @@
       "description": "For readers who want to support ongoing guide updates",
       "features": {
         "feature-1": "Support site maintenance",
-        "feature-2": "Help fund future Anime Card Farm data checks",
+        "feature-2": "Help fund future Roll to Defend data checks",
         "feature-3": "Keep code and guide pages fresh",
         "feature-4": "Support cleaner walkthrough coverage",
         "feature-5": "Help improve page speed and hosting stability",
@@ -113,7 +113,7 @@
     },
     "max": {
       "name": "Backer",
-      "description": "For heavier support of Anime Card Farm Wiki maintenance",
+      "description": "For heavier support of Roll to Defend Wiki maintenance",
       "features": {
         "feature-1": "Support expanded guide coverage",
         "feature-2": "Help fund more frequent source reviews",
@@ -302,14 +302,17 @@
       "download": {
         "title": "Download"
       },
-      "packs": {
-        "title": "Packs"
+      "units": {
+        "title": "Units"
       },
-      "mutations": {
-        "title": "Mutations"
+      "zones": {
+        "title": "Zones"
       },
-      "cards": {
-        "title": "Cards"
+      "luck": {
+        "title": "Luck"
+      },
+      "planner": {
+        "title": "Planner"
       },
       "discord": {
         "title": "Discord"
@@ -319,13 +322,15 @@
       }
     },
     "footer": {
-      "tagline": "An independent Anime Card Farm Wiki for Roblox codes, packs, card upgrades, offline money, mutations, and safe official links.",
+      "tagline": "An independent Roll to Defend Wiki for Roblox codes, units, zombie waves, zones, luck, offline income, and safe official links.",
       "wiki": {
         "title": "Wiki",
         "items": {
-          "packs": "Packs",
-          "cards": "Cards",
-          "mutations": "Mutations",
+          "units": "Units",
+          "tierList": "Tier List",
+          "zones": "Zones",
+          "luck": "Luck",
+          "planner": "Planner",
           "codes": "Codes",
           "updates": "Updates"
         }
@@ -335,8 +340,8 @@
         "items": {
           "all": "All Guides",
           "beginner": "Beginner Guide",
-          "offlineMoney": "Offline Money Guide",
-          "packs": "Packs Guide"
+          "offlineIncome": "Offline Income Guide",
+          "zones": "Zones Guide"
         }
       },
       "legal": {

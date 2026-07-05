@@ -20,7 +20,7 @@ export const websiteConfig: WebsiteConfig = {
   },
   metadata: {
     images: {
-      ogImage: '/animecardfarm/og-image.jpg',
+      ogImage: '/rolltodefend/og-image.jpg',
       logoLight: '/logo.png',
       logoDark: '/logo.png',
     },
@@ -28,7 +28,7 @@ export const websiteConfig: WebsiteConfig = {
       github: '',
       twitter: '',
       blueSky: '',
-      discord: 'https://discord.com/invite/xyBFac6R7q',
+      discord: '',
       mastodon: '',
       linkedin: '',
       youtube: '',
@@ -75,8 +75,8 @@ export const websiteConfig: WebsiteConfig = {
   },
   mail: {
     provider: 'resend',
-    fromEmail: 'Anime Card Farm Wiki <hello@animecardfarm.wiki>',
-    supportEmail: 'hello@animecardfarm.wiki',
+    fromEmail: 'Roll to Defend Wiki <hello@roll-todefend.wiki>',
+    supportEmail: 'hello@roll-todefend.wiki',
   },
   newsletter: {
     enable: false,

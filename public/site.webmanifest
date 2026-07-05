@@ -1,11 +1,11 @@
 {
-  "name": "Anime Card Farm Wiki",
-  "short_name": "ACF Wiki",
-  "description": "Anime Card Farm Wiki for Roblox codes, packs, card upgrades, offline money, mutations, trait gems, Discord, and safe official links.",
+  "name": "Roll to Defend Wiki",
+  "short_name": "RTD Wiki",
+  "description": "Roll to Defend Wiki for Roblox codes, units, zombie waves, zones, luck boosts, offline income, Discord, and safe official links.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#080D17",
-  "theme_color": "#67F7D3",
+  "background_color": "#10140F",
+  "theme_color": "#B7F44A",
   "icons": [
     {
       "src": "/favicon-32x32.png",

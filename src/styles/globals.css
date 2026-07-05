@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Anime Card Farm Wiki - dark, data-dense Roblox card guide theme */
+/* Roll to Defend Wiki - dark, data-dense Roblox defense guide theme */
 
 :root {
   --font-noto-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -389,7 +389,7 @@ body {
 }
 
 /*
- * Anime Card Farm theme colors
+ * Roll to Defend theme colors
  */
 .theme-default {
   --primary: #67f7d3;

@@ -10,9 +10,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return constructMetadata({
-    title: 'Terms of Service | Anime Card Farm Wiki',
+    title: 'Terms of Service | Roll to Defend Wiki',
     description:
-      'Terms for using the independent Anime Card Farm Wiki and Roblox guide site.',
+      'Terms for using the independent Roll to Defend Wiki and Roblox guide site.',
     locale,
     pathname: '/terms',
   });
@@ -20,27 +20,27 @@ export async function generateMetadata({
 
 export default function TermsOfServicePage() {
   return (
-    <div className="bg-[#0F1117] py-12 text-[#F8FAFC]">
+    <div className="bg-[#10140F] py-12 text-[#F9FFF1]">
       <Container className="max-w-3xl space-y-6 px-4">
         <h1 className="font-display text-4xl font-black">Terms of Service</h1>
-        <p className="leading-8 text-[#CBD5E1]">
-          This site provides independent Anime Card Farm guides, data notes, and
+        <p className="leading-8 text-[#DCE9D2]">
+          This site provides independent Roll to Defend guides, data notes, and
           strategy content. It is not affiliated with, endorsed by, sponsored
-          by, or operated by Roblox, dream without the vale, or the official
-          Anime Card Farm team.
+          by, or operated by Roblox, D:/Drive, or the official Roll to Defend
+          team.
         </p>
-        <p className="leading-8 text-[#CBD5E1]">
-          Game data can change quickly. Codes, card values, mutation notes,
-          rewards, update markers, and strategy advice should be treated as
-          guidance, not official instructions.
+        <p className="leading-8 text-[#DCE9D2]">
+          Game data can change quickly. Codes, unit rankings, zone timing, luck
+          notes, rewards, update markers, and strategy advice should be treated
+          as guidance, not official instructions.
         </p>
-        <p className="leading-8 text-[#CBD5E1]">
+        <p className="leading-8 text-[#DCE9D2]">
           Do not use this site to distribute cheats, automation scripts, copied
           clients, account services, or other content that violates game or
           platform terms.
         </p>
-        <p className="leading-8 text-[#CBD5E1]">
-          Questions about these terms can be sent to hello@animecardfarm.wiki.
+        <p className="leading-8 text-[#DCE9D2]">
+          Questions about these terms can be sent to hello@roll-todefend.wiki.
         </p>
       </Container>
     </div>

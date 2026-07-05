@@ -12,18 +12,18 @@ export function useFooterLinks(): NestedMenuItem[] {
       title: t('wiki.title'),
       items: [
         {
-          title: t('wiki.items.packs'),
-          href: Routes.Packs,
+          title: t('wiki.items.units'),
+          href: Routes.Units,
           external: false,
         },
         {
-          title: t('wiki.items.cards'),
-          href: Routes.Cards,
+          title: t('wiki.items.tierList'),
+          href: Routes.TierList,
           external: false,
         },
         {
-          title: t('wiki.items.mutations'),
-          href: Routes.Mutations,
+          title: t('wiki.items.zones'),
+          href: Routes.Zones,
           external: false,
         },
         {
@@ -47,13 +47,13 @@ export function useFooterLinks(): NestedMenuItem[] {
           external: false,
         },
         {
-          title: t('guides.items.offlineMoney'),
-          href: Routes.OfflineMoneyGuide,
+          title: t('guides.items.offlineIncome'),
+          href: Routes.OfflineIncomeGuide,
           external: false,
         },
         {
-          title: t('guides.items.packs'),
-          href: Routes.PacksGuide,
+          title: t('guides.items.zones'),
+          href: Routes.ZonesGuide,
           external: false,
         },
       ],
