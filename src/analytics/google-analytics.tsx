@@ -1,9 +1,9 @@
 import Script from 'next/script';
 
-const GOOGLE_ANALYTICS_ID = 'G-VQK2CQFCJ9';
-
 export default function GoogleAnalytics() {
-  if (process.env.NODE_ENV !== 'production') {
+  const googleAnalyticsId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
+
+  if (process.env.NODE_ENV !== 'production' || !googleAnalyticsId) {
     return null;
   }
 
@@ -12,7 +12,7 @@ export default function GoogleAnalytics() {
       <Script
         id="google-tag-js"
         async
-        src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
         strategy="beforeInteractive"
       />
       <Script
@@ -24,7 +24,7 @@ export default function GoogleAnalytics() {
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', '${GOOGLE_ANALYTICS_ID}');
+gtag('config', '${googleAnalyticsId}');
           `.trim(),
         }}
       />
