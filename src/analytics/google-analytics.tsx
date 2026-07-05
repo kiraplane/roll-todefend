@@ -1,7 +1,30 @@
+import { getCloudflareContext } from '@opennextjs/cloudflare';
 import Script from 'next/script';
 
+function cleanEnvValue(value: string | undefined) {
+  return value?.trim().replace(/^['"]+|['"]+$/g, '') ?? '';
+}
+
+function readCloudflareEnv(name: string) {
+  try {
+    const env = getCloudflareContext().env as Record<string, unknown>;
+    const value = env[name];
+
+    return typeof value === 'string' ? cleanEnvValue(value) : '';
+  } catch {
+    return '';
+  }
+}
+
+function getGoogleAnalyticsId() {
+  return (
+    cleanEnvValue(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID) ||
+    readCloudflareEnv('NEXT_PUBLIC_GOOGLE_ANALYTICS_ID')
+  );
+}
+
 export default function GoogleAnalytics() {
-  const googleAnalyticsId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
+  const googleAnalyticsId = getGoogleAnalyticsId();
 
   if (process.env.NODE_ENV !== 'production' || !googleAnalyticsId) {
     return null;

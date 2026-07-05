@@ -3,6 +3,9 @@
   "main": ".open-next/worker.js",
   "name": "roll-todefend",
   "keep_vars": true,
+  "vars": {
+    "NEXT_PUBLIC_GOOGLE_ANALYTICS_ID": "G-M9KMJEW0BT"
+  },
   "compatibility_date": "2025-04-01",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "routes": [
