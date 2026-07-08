@@ -375,6 +375,19 @@ export const guides: Guide[] = [
         ],
       },
       {
+        heading: 'Match the unit to the wave problem',
+        paragraphs: [
+          'For now, the most useful best-units advice is scenario based. If the first zombies reach the line too fast, a control or quick-hit unit can be better than a rare unit that takes too long to matter. If the line is stable but the final group survives, a heavier damage unit becomes the better upgrade.',
+          'Use three checkpoints before spending again: did the new unit change the wave you were losing, did its first upgrade feel cheaper than another roll session, and does it still help after buying the next zone? If the answer is no, keep it as a temporary slot instead of making it the account carry.',
+        ],
+        bullets: [
+          'Early lane leaks: prioritize quick attackers or control.',
+          'Money stalls: stop rolling and buy the upgrade that improves income or clear speed.',
+          'Next-zone pressure: keep one flexible unit slot rather than maxing a short-lived pull.',
+          'Boss-style waves: add heavier damage only after the normal wave is safe.',
+        ],
+      },
+      {
         heading: 'Luck sessions should have stop rules',
         paragraphs: [
           'Max-luck videos are useful because they show what players care about: chasing the strongest army. For normal players, the key is a stop rule. Roll during a luck window when you have enough money to make several attempts, then stop when a unit meaningfully improves the defense or when the next useful upgrade becomes cheaper than more rolling.',

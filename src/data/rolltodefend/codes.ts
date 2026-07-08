@@ -7,7 +7,30 @@ export const activeCodes: GameCode[] = [];
 
 export const watchCodes: GameCode[] = [];
 
-export const expiredCodes: GameCode[] = [];
+export const expiredCodes: GameCode[] = [
+  {
+    code: 'JULY4TH',
+    reward: 'Former event reward',
+    status: 'expired',
+    firstSeen: '2026-07-08',
+    lastChecked: CODE_CHECKED_AT,
+    sourceLabel: 'Pocket Tactics July 7, 2026 codes check',
+    confidence: 'medium',
+    notes:
+      'Current Roll to Defend code trackers list this as removed/expired. It stays out of the active table until an official source reactivates it.',
+  },
+  {
+    code: 'ADMINABUSED',
+    reward: 'Former admin-event reward',
+    status: 'expired',
+    firstSeen: '2026-07-08',
+    lastChecked: CODE_CHECKED_AT,
+    sourceLabel: 'Pocket Tactics July 7, 2026 codes check',
+    confidence: 'medium',
+    notes:
+      'Reported as removed/expired by current guide sources. Keep it visible only as an expired-code explanation for players searching old videos.',
+  },
+];
 
 export const codeCheckSummary = {
   checkedAt: CODE_CHECKED_AT,
@@ -25,6 +48,10 @@ export const codeCheckSummary = {
     {
       label: 'Earnaldo codes status',
       url: 'https://earnaldo.com/blog/roll-to-defend-codes',
+    },
+    {
+      label: 'Pocket Tactics codes status',
+      url: 'https://www.pockettactics.com/roll-to-defend-codes',
     },
     {
       label: 'Creator Exchange',
