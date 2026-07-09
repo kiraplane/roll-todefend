@@ -1,11 +1,23 @@
 import { officialGameFacts } from './sources';
 import type { GameCode } from './types';
 
-export const CODE_CHECKED_AT = '2026-07-08';
+export const CODE_CHECKED_AT = '2026-07-09';
 
 export const activeCodes: GameCode[] = [];
 
-export const watchCodes: GameCode[] = [];
+export const watchCodes: GameCode[] = [
+  {
+    code: 'ROLL',
+    reward: '100k coins, 250 brains, one luck boost, and one roll boost',
+    status: 'watch',
+    firstSeen: '2026-07-09',
+    lastChecked: CODE_CHECKED_AT,
+    sourceLabel: 'Pocket Tactics active listing, PCGamesN no-working-code conflict',
+    confidence: 'watch',
+    notes:
+      'Pocket Tactics lists ROLL as a new working code on July 9, while PCGamesN reports no working codes on the same date. Keep it in watch until a second current source or official channel confirms it.',
+  },
+];
 
 export const expiredCodes: GameCode[] = [
   {
@@ -35,7 +47,7 @@ export const expiredCodes: GameCode[] = [
 export const codeCheckSummary = {
   checkedAt: CODE_CHECKED_AT,
   status:
-    'No verified working Roll to Defend codes are confirmed by this site yet. Keep the page bookmarked, because codes demand is active and new Roblox games can add redeem rewards after milestones or updates.',
+    'No verified working Roll to Defend codes are confirmed by this site yet. ROLL is being watched because current trackers disagree, and it should move to active only after a second current source or official channel confirms it.',
   sourcesChecked: [
     {
       label: 'Official Roblox game page',
@@ -52,6 +64,10 @@ export const codeCheckSummary = {
     {
       label: 'Pocket Tactics codes status',
       url: 'https://www.pockettactics.com/roll-to-defend-codes',
+    },
+    {
+      label: 'PCGamesN codes status',
+      url: 'https://www.pcgamesn.com/roll-to-defend/codes',
     },
     {
       label: 'Creator Exchange',

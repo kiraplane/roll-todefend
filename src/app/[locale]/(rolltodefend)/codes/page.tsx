@@ -38,7 +38,7 @@ export default function CodesPage() {
     {
       question: 'Are there working Roll to Defend codes right now?',
       answer:
-        'No verified working public codes are confirmed by this site as of July 5, 2026.',
+        'No verified working public codes are confirmed by this site as of July 9, 2026. ROLL is on the watchlist because current code trackers disagree about whether it works.',
     },
     {
       question: 'Where would real Roll to Defend codes appear?',
@@ -158,9 +158,12 @@ export default function CodesPage() {
               </table>
             </div>
           ) : (
-            <div className="p-6 text-[#DCE9D2] text-sm leading-7">
-              No verified working public codes are listed yet. Check the sources
-              below before trusting any reposted code table.
+          <div className="p-6 text-[#DCE9D2] text-sm leading-7">
+              No verified working public codes are listed yet. ROLL is tracked
+              below as a source-conflict candidate, but it is not promoted to
+              active until another current source or official channel confirms
+              it. Check the sources below before trusting any reposted code
+              table.
             </div>
           )}
         </section>
@@ -176,6 +179,9 @@ export default function CodesPage() {
                     className="rounded-md border border-[#3A4F2D] bg-[#10140F] p-4"
                   >
                     <p className="font-semibold text-[#FFF2C5]">{item.code}</p>
+                    <p className="mt-1 text-[#B7F44A] text-sm">
+                      Reported reward: {item.reward}
+                    </p>
                     <p className="mt-2 text-[#DCE9D2] text-sm leading-6">
                       {item.notes}
                     </p>
