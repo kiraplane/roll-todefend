@@ -54,7 +54,7 @@ const primaryLinks = [
     body:
       activeCodes.length > 0
         ? `${activeCodes.length} verified working codes tracked.`
-        : 'No verified working public codes yet; check source status before trusting lists.',
+        : 'No verified working public codes yet; compare the latest tracker notes before trusting lists.',
     href: '/codes',
     icon: ShieldAlert,
   },

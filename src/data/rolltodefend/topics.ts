@@ -300,7 +300,7 @@ export const topicPages: Record<string, TopicPage> = {
         question:
           'Did this site find verified active codes after the latest update?',
         answer:
-          'No verified working public codes are listed as active by this site as of July 5, 2026.',
+          'No verified working public codes are listed as active by this site as of July 10, 2026. ROLL is watched because current code trackers conflict.',
       },
       {
         question: 'What should be checked after updates?',

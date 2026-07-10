@@ -308,7 +308,7 @@ export const guides: Guide[] = [
       {
         question: 'Are there working Roll to Defend codes today?',
         answer:
-          'No verified working public codes are confirmed by this site as of July 5, 2026.',
+          'No verified working public codes are confirmed by this site as of July 10, 2026. ROLL remains a watchlist code because current trackers disagree.',
       },
       {
         question: 'Should the site still have a codes page?',

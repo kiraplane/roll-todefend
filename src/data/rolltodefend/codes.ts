@@ -1,7 +1,7 @@
 import { officialGameFacts } from './sources';
 import type { GameCode } from './types';
 
-export const CODE_CHECKED_AT = '2026-07-09';
+export const CODE_CHECKED_AT = '2026-07-10';
 
 export const activeCodes: GameCode[] = [];
 
@@ -15,7 +15,7 @@ export const watchCodes: GameCode[] = [
     sourceLabel: 'Pocket Tactics active listing, PCGamesN no-working-code conflict',
     confidence: 'watch',
     notes:
-      'Pocket Tactics lists ROLL as a new working code on July 9, while PCGamesN reports no working codes on the same date. Keep it in watch until a second current source or official channel confirms it.',
+      'Pocket Tactics and Sportskeeda list ROLL as working, while PCGamesN and Destructoid report no active working codes. Keep it in watch until official channels or a clearer current consensus confirms it.',
   },
 ];
 

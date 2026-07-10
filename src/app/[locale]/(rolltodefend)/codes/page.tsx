@@ -38,7 +38,7 @@ export default function CodesPage() {
     {
       question: 'Are there working Roll to Defend codes right now?',
       answer:
-        'No verified working public codes are confirmed by this site as of July 9, 2026. ROLL is on the watchlist because current code trackers disagree about whether it works.',
+        'No verified working public codes are confirmed by this site as of July 10, 2026. ROLL is on the watchlist because current code trackers disagree about whether it works.',
     },
     {
       question: 'Where would real Roll to Defend codes appear?',
