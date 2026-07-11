@@ -1,23 +1,23 @@
 import { officialGameFacts } from './sources';
 import type { GameCode } from './types';
 
-export const CODE_CHECKED_AT = '2026-07-10';
+export const CODE_CHECKED_AT = '2026-07-11';
 
-export const activeCodes: GameCode[] = [];
-
-export const watchCodes: GameCode[] = [
+export const activeCodes: GameCode[] = [
   {
     code: 'ROLL',
     reward: '100k coins, 250 brains, one luck boost, and one roll boost',
-    status: 'watch',
+    status: 'active',
     firstSeen: '2026-07-09',
     lastChecked: CODE_CHECKED_AT,
-    sourceLabel: 'Pocket Tactics active listing, PCGamesN no-working-code conflict',
-    confidence: 'watch',
+    sourceLabel: 'Pocket Tactics, Destructoid, Pro Game Guides',
+    confidence: 'medium',
     notes:
-      'Pocket Tactics and Sportskeeda list ROLL as working, while PCGamesN and Destructoid report no active working codes. Keep it in watch until official channels or a clearer current consensus confirms it.',
+      'Promoted on July 11 after Pocket Tactics, Destructoid, and Pro Game Guides all listed ROLL as the current active code. PCGamesN previously conflicted, so treat it as source-checked rather than game-tested.',
   },
 ];
+
+export const watchCodes: GameCode[] = [];
 
 export const expiredCodes: GameCode[] = [
   {
@@ -47,7 +47,7 @@ export const expiredCodes: GameCode[] = [
 export const codeCheckSummary = {
   checkedAt: CODE_CHECKED_AT,
   status:
-    'No verified working Roll to Defend codes are confirmed by this site yet. ROLL is being watched because current trackers disagree, and it should move to active only after a second current source or official channel confirms it.',
+    'ROLL is the current source-checked active Roll to Defend code. It is not game-tested by this site, but multiple July 9 trackers now agree it is working.',
   sourcesChecked: [
     {
       label: 'Official Roblox game page',
@@ -64,6 +64,14 @@ export const codeCheckSummary = {
     {
       label: 'Pocket Tactics codes status',
       url: 'https://www.pockettactics.com/roll-to-defend-codes',
+    },
+    {
+      label: 'Destructoid codes status',
+      url: 'https://www.destructoid.com/roll-to-defend-codes/',
+    },
+    {
+      label: 'Pro Game Guides codes status',
+      url: 'https://progameguides.com/roblox/roll-to-defend-codes/',
     },
     {
       label: 'PCGamesN codes status',
