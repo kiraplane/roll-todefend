@@ -1,7 +1,7 @@
 import type { DataSource } from './types';
 
-export const CHECKED_AT = '2026-07-11';
-export const OFFICIAL_CHECKED_AT = '2026-07-11';
+export const CHECKED_AT = '2026-07-14';
+export const OFFICIAL_CHECKED_AT = '2026-07-14';
 
 export const officialGameFacts = {
   name: 'Roll to Defend',
@@ -16,11 +16,11 @@ export const officialGameFacts = {
   genre: 'Roblox roll-based zombie tower defense / incremental simulator',
   status: 'Live Roblox experience',
   createdAt: '2026-05-14T23:02:41.665Z',
-  updatedAt: '2026-07-05T09:38:45.3380668Z',
+  updatedAt: '2026-07-14T00:01:06.2982936Z',
   maxPlayers: 6,
-  activePlayersAtCheck: 8027,
-  visitsAtCheck: 1911309,
-  favoritesAtCheck: 6665,
+  activePlayersAtCheck: 4218,
+  visitsAtCheck: 7411366,
+  favoritesAtCheck: 18345,
   officialRobloxUrl:
     'https://www.roblox.com/games/129559579789369/Roll-to-Defend',
   officialGroupUrl: 'https://www.roblox.com/communities/861213399/D-Drive',

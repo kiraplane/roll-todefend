@@ -1,9 +1,31 @@
 import { officialGameFacts } from './sources';
 import type { GameCode } from './types';
 
-export const CODE_CHECKED_AT = '2026-07-11';
+export const CODE_CHECKED_AT = '2026-07-14';
 
 export const activeCodes: GameCode[] = [
+  {
+    code: 'SUMMER2026',
+    reward: '40k coins, 250 brains, one luck boost, and one roll boost',
+    status: 'active',
+    firstSeen: '2026-07-14',
+    lastChecked: CODE_CHECKED_AT,
+    sourceLabel: 'Pocket Tactics, Destructoid, current YouTube code results',
+    confidence: 'medium',
+    notes:
+      'Newest summer code cross-checked on July 14. Redeem before a rebirth or rare-roll push so both currency and boost rewards are useful.',
+  },
+  {
+    code: 'UPDATE3',
+    reward: '150k coins, 5k brains, two roll boosts, and one stellar potion',
+    status: 'active',
+    firstSeen: '2026-07-14',
+    lastChecked: CODE_CHECKED_AT,
+    sourceLabel: 'Pocket Tactics, Destructoid, current YouTube code results',
+    confidence: 'medium',
+    notes:
+      'Newest Update 3 code reported active in the July 14 source pass. It was not game-tested here, so keep it source-checked.',
+  },
   {
     code: 'ROLL',
     reward: '100k coins, 250 brains, one luck boost, and one roll boost',
@@ -47,7 +69,7 @@ export const expiredCodes: GameCode[] = [
 export const codeCheckSummary = {
   checkedAt: CODE_CHECKED_AT,
   status:
-    'ROLL is the current source-checked active Roll to Defend code. It is not game-tested by this site, but multiple July 9 trackers now agree it is working.',
+    `${activeCodes.length} active Roll to Defend codes are source-checked. July 14 added SUMMER2026 and UPDATE3 from the newest public code trackers.`,
   sourcesChecked: [
     {
       label: 'Official Roblox game page',
