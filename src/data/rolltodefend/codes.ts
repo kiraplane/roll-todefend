@@ -1,9 +1,20 @@
 import { officialGameFacts } from './sources';
 import type { GameCode } from './types';
 
-export const CODE_CHECKED_AT = '2026-07-24';
+export const CODE_CHECKED_AT = '2026-07-29';
 
 export const activeCodes: GameCode[] = [
+  {
+    code: 'SORRY4DELAYZ',
+    reward: '150k coins, 5k brains, and one stellar potion',
+    status: 'active',
+    firstSeen: '2026-07-25',
+    lastChecked: '2026-07-29',
+    sourceLabel: 'Pro Game Guides',
+    confidence: 'medium',
+    notes:
+      'Newest delay-compensation code in the July 25 active list. Redeem before a major rolling or rebirth session.',
+  },
   {
     code: 'SUMMER2026',
     reward: '40k coins, 250 brains, one luck boost, and one roll boost',
@@ -69,7 +80,7 @@ export const expiredCodes: GameCode[] = [
 export const codeCheckSummary = {
   checkedAt: CODE_CHECKED_AT,
   status:
-    `${activeCodes.length} active Roll to Defend codes are source-checked. July 14 added SUMMER2026 and UPDATE3 from the newest public code trackers.`,
+    `${activeCodes.length} active Roll to Defend codes are source-checked. July 28 added SORRY4DELAYZ from the newest public code tracker.`,
   sourcesChecked: [
     {
       label: 'Official Roblox game page',
