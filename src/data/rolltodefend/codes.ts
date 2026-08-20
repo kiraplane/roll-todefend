@@ -1,7 +1,7 @@
 import { officialGameFacts } from './sources';
 import type { GameCode } from './types';
 
-export const CODE_CHECKED_AT = '2026-08-17';
+export const CODE_CHECKED_AT = '2026-08-20';
 
 export const activeCodes: GameCode[] = [
   {
@@ -9,7 +9,7 @@ export const activeCodes: GameCode[] = [
     reward: '150k coins, 5k brains, and one stellar potion',
     status: 'active',
     firstSeen: '2026-07-25',
-    lastChecked: '2026-08-17',
+    lastChecked: '2026-08-20',
     sourceLabel: 'Pro Game Guides',
     confidence: 'medium',
     notes:
