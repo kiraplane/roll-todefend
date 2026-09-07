@@ -1,7 +1,7 @@
 import { officialGameFacts } from './sources';
 import type { GameCode } from './types';
 
-export const CODE_CHECKED_AT = '2026-08-24';
+export const CODE_CHECKED_AT = '2026-09-07';
 
 export const activeCodes: GameCode[] = [
   {
@@ -9,50 +9,49 @@ export const activeCodes: GameCode[] = [
     reward: '150k coins, 5k brains, and one stellar potion',
     status: 'active',
     firstSeen: '2026-07-25',
-    lastChecked: '2026-08-24',
+    lastChecked: '2026-09-07',
     sourceLabel: 'Pro Game Guides',
     confidence: 'medium',
     notes:
-      'Newest delay-compensation code in the July 25 active list. Redeem before a major rolling or rebirth session.',
+      'The only code retained as active by the September 6 Game.Guide pass. Redeem before a major rolling or rebirth session.',
   },
+];
+
+export const watchCodes: GameCode[] = [
   {
     code: 'SUMMER2026',
     reward: '40k coins, 250 brains, one luck boost, and one roll boost',
-    status: 'active',
+    status: 'watch',
     firstSeen: '2026-07-14',
     lastChecked: CODE_CHECKED_AT,
-    sourceLabel: 'Pocket Tactics, Destructoid, current YouTube code results',
-    confidence: 'medium',
+    sourceLabel: 'NerdsChalk September 1; Game.Guide September 6 conflict',
+    confidence: 'low',
     notes:
-      'Newest summer code cross-checked on July 14. Redeem before a rebirth or rare-roll push so both currency and boost rewards are useful.',
+      'A September 1 source retains it, but the newer September 6 tracker marks it expired. Keep it as a last retry, not a confirmed working code.',
   },
+];
+
+export const expiredCodes: GameCode[] = [
   {
     code: 'UPDATE3',
     reward: '150k coins, 5k brains, two roll boosts, and one stellar potion',
-    status: 'active',
+    status: 'expired',
     firstSeen: '2026-07-14',
     lastChecked: CODE_CHECKED_AT,
-    sourceLabel: 'Pocket Tactics, Destructoid, current YouTube code results',
+    sourceLabel: 'Game.Guide September 6, 2026',
     confidence: 'medium',
-    notes:
-      'Newest Update 3 code reported active in the July 14 source pass. It was not game-tested here, so keep it source-checked.',
+    notes: 'Moved to expired by the current September code-history check.',
   },
   {
     code: 'ROLL',
     reward: '100k coins, 250 brains, one luck boost, and one roll boost',
-    status: 'active',
+    status: 'expired',
     firstSeen: '2026-07-09',
     lastChecked: CODE_CHECKED_AT,
-    sourceLabel: 'Pocket Tactics, Destructoid, Pro Game Guides',
+    sourceLabel: 'Game.Guide September 6, 2026',
     confidence: 'medium',
-    notes:
-      'Promoted on July 11 after Pocket Tactics, Destructoid, and Pro Game Guides all listed ROLL as the current active code. PCGamesN previously conflicted, so treat it as source-checked rather than game-tested.',
+    notes: 'Moved to expired by the current September code-history check.',
   },
-];
-
-export const watchCodes: GameCode[] = [];
-
-export const expiredCodes: GameCode[] = [
   {
     code: 'JULY4TH',
     reward: 'Former event reward',
@@ -80,8 +79,16 @@ export const expiredCodes: GameCode[] = [
 export const codeCheckSummary = {
   checkedAt: CODE_CHECKED_AT,
   status:
-    `${activeCodes.length} active Roll to Defend codes are source-checked. PCGamesN's August 23 pass still retains SORRY4DELAYZ, SUMMER2026, UPDATE3, and ROLL.`,
+    `${activeCodes.length} active Roll to Defend code is source-checked. SUMMER2026 remains a conflicting retry candidate; UPDATE3 and ROLL moved to expired history.`,
   sourcesChecked: [
+    {
+      label: 'Game.Guide codes — updated September 6, 2026',
+      url: 'https://www.game.guide/roblox-codes/roll-to-defend',
+    },
+    {
+      label: 'NerdsChalk codes — updated September 1, 2026',
+      url: 'https://nerdschalk.com/roll-to-defend-codes/',
+    },
     {
       label: 'Official Roblox game page',
       url: officialGameFacts.officialRobloxUrl,
